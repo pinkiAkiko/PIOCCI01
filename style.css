@@ -1,0 +1,192 @@
+/* ═══════════════════════════════════════════
+   PIOCCI — Custom Styles
+   ═══════════════════════════════════════════ */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ── Diagonal arrow button ── */
+.btn-diagonal {
+  position: relative;
+  padding-right: 48px;
+  overflow: hidden;
+}
+.btn-diagonal::after {
+  content: "north_east";
+  font-family: 'Material Symbols Outlined';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 40px;
+  background: #AD3300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.card-tag { background: #F2F3FF; color: #04005c; padding: 4px 12px; display: inline-block; }
+.bg-slope  { clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); }
+
+/* ════════════════════════════════════════
+   HAMBURGER BUTTON
+   ════════════════════════════════════════ */
+#navToggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 1100;
+}
+#navToggle .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #04005c;
+  border-radius: 2px;
+  transition: transform 0.35s ease, opacity 0.25s ease, background 0.25s;
+  transform-origin: center;
+}
+#navToggle.open .bar            { background: #ffffff; }
+#navToggle.open .bar:nth-child(1) { transform: translateY(7px)  rotate(45deg); }
+#navToggle.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#navToggle.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ════════════════════════════════════════
+   QUARTER-CIRCLE NAV
+   ════════════════════════════════════════ */
+
+#navOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+#navOverlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Main circle element —
+   background set directly so no ::before covers the items.
+   clip-path clips both the background and children. */
+#circleNav {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  /* background visible only within the clip */
+  background: linear-gradient(150deg, #1a1b6e 0%, #04005c 50%, #020240 100%);
+  /* closed state: zero-radius point at top-right */
+  clip-path: circle(0px at 100% 0%);
+  transition: clip-path 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  /* clicks pass through to overlay outside the clipped region */
+  pointer-events: none;
+}
+#circleNav.open {
+  clip-path: circle(440px at 100% 0%);
+}
+
+/* ── Close (X) button ──
+   Sits just inside the top-right corner of the visible circle */
+#circleCloseBtn {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s, border-color 0.2s;
+}
+#circleCloseBtn:hover {
+  background: #AD3300;
+  border-color: #AD3300;
+}
+#circleNav.open #circleCloseBtn {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+/* ── Arc item list ──
+   Each li is anchored at the top-right corner (right:0, top:0).
+   width = arm length (~radius).
+   transform-origin: right top  → rotates like a clock hand from the corner.
+   Text is left-aligned → starts at the arc edge, reads toward centre. */
+#circleNav ul {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arc-item {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  transform-origin: right top;
+  pointer-events: all;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#circleNav.open .arc-item { opacity: 1; }
+
+/* Staggered delays — applied via JS (see script.js) */
+
+.arc-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 3px 0 3px 16px;
+  color: rgba(255,255,255,0.82);
+  font-family: Tobias, 'Times New Roman', Georgia, serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+.arc-link:hover { color: #fff; letter-spacing: 0.22em; }
+
+.arc-link::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #AD3300;
+  margin-right: 9px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.arc-link:hover::before { transform: scale(1.6); }

@@ -1,457 +1,580 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Global Commerce Chamber | Institutional Excellence</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-high": "#eae8e7",
-                        "primary-fixed-dim": "#c0c1ff",
-                        "on-primary": "#ffffff",
-                        "surface-bright": "#fbf9f8",
-                        "outline-variant": "#c7c5d3",
-                        "on-surface": "#1b1c1c",
-                        "surface-variant": "#e4e2e2",
-                        "on-error-container": "#93000a",
-                        "on-secondary": "#ffffff",
-                        "primary": "#04005c",
-                        "surface-tint": "#5356a6",
-                        "secondary-container": "#e9052a",
-                        "on-primary-fixed": "#0b0961",
-                        "primary-fixed": "#e1e0ff",
-                        "surface": "#fbf9f8",
-                        "on-tertiary-fixed-variant": "#444650",
-                        "on-tertiary-container": "#8f919c",
-                        "tertiary-fixed-dim": "#c4c6d1",
-                        "tertiary-container": "#272a33",
-                        "surface-container-highest": "#e4e2e2",
-                        "surface-container-low": "#f5f3f3",
-                        "on-primary-fixed-variant": "#3b3d8d",
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-on-surface": "#f2f0f0",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed": "#191b24",
-                        "inverse-surface": "#303030",
-                        "primary-container": "#1d1e6f",
-                        "on-secondary-fixed": "#410005",
-                        "surface-container": "#efeded",
-                        "on-secondary-fixed-variant": "#930015",
-                        "on-tertiary": "#ffffff",
-                        "background": "#fbf9f8",
-                        "on-secondary-container": "#fffbff",
-                        "secondary-fixed-dim": "#ffb3ae",
-                        "on-primary-container": "#878ade",
-                        "on-error": "#ffffff",
-                        "on-background": "#1b1c1c",
-                        "inverse-primary": "#c0c1ff",
-                        "secondary-fixed": "#ffdad7",
-                        "outline": "#777682",
-                        "on-surface-variant": "#464651",
-                        "tertiary-fixed": "#e1e2ee",
-                        "surface-dim": "#dbd9d9",
-                        "error": "#ba1a1a",
-                        "tertiary": "#13161e",
-                        "secondary": "#bb001e"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "stack-lg": "64px",
-                        "stack-md": "24px",
-                        "gutter-grid": "24px",
-                        "stack-sm": "8px",
-                        "section-padding": "80px",
-                        "margin-page": "5vw"
-                    },
-                    "fontFamily": {
-                        "label-caps": ["Manrope"],
-                        "headline-xl": ["Manrope"],
-                        "headline-md": ["Manrope"],
-                        "headline-lg-mobile": ["Manrope"],
-                        "body-md": ["Manrope"],
-                        "body-lg": ["Manrope"],
-                        "headline-lg": ["Manrope"]
-                    },
-                    "fontSize": {
-                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                        "headline-lg-mobile": ["26px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
+<html class="light" lang="en">
 
-        .diagonal-accent {
-            position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-
-        .btn-diagonal {
-            position: relative;
-            padding-right: 48px;
-            overflow: hidden;
-        }
-
-        .btn-diagonal::after {
-            content: "north_east";
-            font-family: 'Material Symbols Outlined';
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            background: #bb001e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
-        }
-
-        .card-tag {
-            background: #F2F3FF;
-            color: #04005c;
-            padding: 4px 12px;
-            display: inline-block;
-        }
-
-        .bg-slope {
-            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-        }
-
-        .side-nav-active-clip {
-            clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
-        }
-    </style>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Global Commerce Chamber | Institutional Excellence</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#eae8e7",
+            "primary-fixed-dim": "#c0c1ff",
+            "on-primary": "#ffffff",
+            "surface-bright": "#fbf9f8",
+            "outline-variant": "#c7c5d3",
+            "on-surface": "#1b1c1c",
+            "surface-variant": "#e4e2e2",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "primary": "#04005c",
+            "surface-tint": "#5356a6",
+            "secondary-container": "#C84000",
+            "on-primary-fixed": "#0b0961",
+            "primary-fixed": "#e1e0ff",
+            "surface": "#fbf9f8",
+            "on-tertiary-fixed-variant": "#444650",
+            "on-tertiary-container": "#8f919c",
+            "tertiary-fixed-dim": "#c4c6d1",
+            "tertiary-container": "#272a33",
+            "surface-container-highest": "#e4e2e2",
+            "surface-container-low": "#f5f3f3",
+            "on-primary-fixed-variant": "#3b3d8d",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#f2f0f0",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed": "#191b24",
+            "inverse-surface": "#303030",
+            "primary-container": "#1d1e6f",
+            "on-secondary-fixed": "#410005",
+            "surface-container": "#efeded",
+            "on-secondary-fixed-variant": "#930015",
+            "on-tertiary": "#ffffff",
+            "background": "#fbf9f8",
+            "on-secondary-container": "#fffbff",
+            "secondary-fixed-dim": "#ffb3ae",
+            "on-primary-container": "#878ade",
+            "on-error": "#ffffff",
+            "on-background": "#1b1c1c",
+            "inverse-primary": "#c0c1ff",
+            "secondary-fixed": "#ffdad7",
+            "outline": "#777682",
+            "on-surface-variant": "#464651",
+            "tertiary-fixed": "#e1e2ee",
+            "surface-dim": "#dbd9d9",
+            "error": "#ba1a1a",
+            "tertiary": "#13161e",
+            "secondary": "#AD3300"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-lg": "64px",
+            "stack-md": "24px",
+            "gutter-grid": "24px",
+            "stack-sm": "8px",
+            "section-padding": "80px",
+            "margin-page": "5vw"
+          },
+          "fontFamily": {
+            "label-caps": ["Tobias", "Times New Roman", "Georgia", "serif"],
+            "headline-xl": ["Tobias", "Times New Roman", "Georgia", "serif"],
+            "headline-md": ["Tobias", "Times New Roman", "Georgia", "serif"],
+            "headline-lg-mobile": ["Tobias", "Times New Roman", "Georgia", "serif"],
+            "body-md": ["Tobias", "Times New Roman", "Georgia", "serif"],
+            "body-lg": ["Tobias", "Times New Roman", "Georgia", "serif"],
+            "headline-lg": ["Tobias", "Times New Roman", "Georgia", "serif"]
+          },
+          "fontSize": {
+            "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }],
+            "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "1.2", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+  <!-- styles → style.css -->
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-white">
-<!-- Top Navigation Anchor (As per JSON) -->
-<header class="bg-surface dark:bg-on-background border-b border-outline-variant/30 dark:border-outline-variant/10 docked full-width top-0 z-50">
-<nav class="flex justify-between items-center w-full px-margin-page py-6 max-w-[1440px] mx-auto">
-<div class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed uppercase tracking-tight">
-                Global Commerce Chamber
-            </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-primary dark:text-primary-fixed border-b-2 border-secondary font-bold pb-1 transition-colors duration-200" href="#">Initiatives</a>
-<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Briefings</a>
-<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Network</a>
-<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Membership</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="p-2 scale-100 hover:scale-[1.02] transition-transform duration-200 text-primary">
-<span class="material-symbols-outlined" data-icon="search">search</span>
-</button>
-<button class="p-2 scale-100 hover:scale-[1.02] transition-transform duration-200 text-primary">
-<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-</button>
-</div>
-</nav>
-</header>
-<div class="flex">
-<!-- Sidebar Navigation (As per JSON) -->
-<aside class="hidden lg:flex fixed left-0 top-24 h-[calc(100vh-6rem)] w-72 bg-primary dark:bg-primary-container flex-col z-40 transition-all duration-300">
-<div class="p-8 flex flex-col gap-2">
-<span class="font-headline-md text-headline-md font-bold text-on-primary">Member Portal</span>
-<span class="font-label-caps text-label-caps text-on-primary/60">Institutional Access</span>
-</div>
-<nav class="flex-grow">
-<ul class="flex flex-col">
-<li class="group">
-<a class="flex items-center gap-4 bg-secondary text-on-secondary py-4 px-6 relative translate-x-1 duration-200" href="#">
-<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
-<span class="font-label-caps text-label-caps">Executive Dashboard</span>
-<div class="absolute right-0 top-0 h-full w-3 bg-surface"></div>
-</a>
-</li>
-<li class="group">
-<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="map">map</span>
-<span class="font-label-caps text-label-caps">Strategic Roadmap</span>
-</a>
-</li>
-<li class="group">
-<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="group">group</span>
-<span class="font-label-caps text-label-caps">Member Directory</span>
-</a>
-</li>
-<li class="group">
-<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
-<span class="font-label-caps text-label-caps">Economic Insights</span>
-</a>
-</li>
-<li class="group">
-<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
-<span class="font-label-caps text-label-caps">Policy Archive</span>
-</a>
-</li>
-</ul>
-</nav>
-<div class="p-6 border-t border-on-primary/10">
-<button class="w-full bg-secondary text-white font-label-caps text-label-caps py-4 px-4 hover:brightness-110 transition-all">
-                    Join Global Network
-                </button>
-</div>
-<div class="p-6 flex gap-6 text-on-primary/50">
-<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors" data-icon="settings">settings</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors" data-icon="contact_support">contact_support</span>
-</div>
-</aside>
-<!-- Main Content Canvas -->
-<main class="lg:ml-72 w-full">
-<!-- Hero Section -->
-<section class="relative min-h-[600px] flex items-center overflow-hidden">
-<img alt="Corporate Headquarters" class="absolute inset-0 w-full h-full object-cover" data-alt="A professional, low-angle photograph of a towering modern glass skyscraper against a clear blue sky, reflecting the surrounding urban corporate landscape. The lighting is crisp and natural, emphasizing the architectural lines and prestigious institutional atmosphere. The scene evokes high-level corporate commerce and strategic leadership, maintaining a minimalist and airy light-mode aesthetic with deep navy shadows and subtle red highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5Ff-FF0zddPiESjICZ4lcr3bTKCm9jCW3KN25I9-0OlJ8lW-3nmMcfzJqtVWNIxyDuEIQJPbqTtyIWjAP5l6deXclu1U2o-HFa74zaBNpsgfoaP_aiOoXMTwGv7iwQF_2ieD3Ghz_gNlwx_F6LgZ4y0cgD8fcEb4B4bmsQTcjlqMIuzm8DXckFUrnfv1887Z3SVSeJhXAKGvivLBrhJHnisMzwux5RW--YFRCJLjecbEW_z7JgThbX6W5vUxNY1QhDX7kpaLW773"/>
-<div class="absolute inset-0 bg-primary-container/40"></div>
-<div class="relative z-10 px-margin-page py-section-padding text-white max-w-4xl">
-<span class="bg-secondary text-white font-label-caps text-label-caps px-4 py-2 mb-6 inline-block">Institutional Excellence</span>
-<h1 class="font-headline-xl text-headline-xl mb-8">Global Business Networking: Powering the Future Economy.</h1>
-<button class="bg-primary hover:bg-primary/90 text-white font-label-caps text-label-caps py-5 px-8 btn-diagonal transition-all">
-                        JOIN THE MOVEMENT
-                    </button>
-</div>
-<div class="absolute bottom-0 right-0 w-1/2 h-24 bg-surface" style="clip-path: polygon(100% 0, 100% 100%, 0 100%);"></div>
-</section>
-<!-- Strategic Initiatives: Horizontal Bento Grid -->
-<section class="px-margin-page py-section-padding max-w-[1440px] mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-outline-variant/30 pb-6">
-<div>
-<span class="font-label-caps text-label-caps text-secondary uppercase block mb-2">Strategic Vision</span>
-<h2 class="font-headline-lg text-headline-lg text-primary">Initiatives of the Chamber</h2>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-grid">
-<!-- Corridor Card -->
-<div class="group cursor-pointer">
-<div class="relative h-64 overflow-hidden mb-6">
-<img alt="Trade Corridors" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-contrast professional photograph of business executives in a modern boardroom, engaged in a strategic meeting. The environment is bright and airy with large windows. The color palette features institutional navy blues and clean whites, accented with sharp red geometric details in the background. The mood is collaborative, focused, and high-stakes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmTLoxyw9G3EOISvvWAEneGkvflkIXRmfAAA3lbNrQVzePS6jts1Npm5QpBg3R16vOeBeMmN46qq0lnZLRK5jSLQMkJkFLHF9Q3n6ApeU_wNZZoYRgeLhQX1HoV4BgTQ15FhOFgwgmG9SdXpoAru7UzNtZxPiRiZJgTtnDTK_RZyGSUxgbXo97SPo99XlCM73N9iuIE5Y-5LiQFV6jdKztYUlk81hRLI5qwEgb-6zqVZDnwcqWZqRVubLOHyIwQEp72pQgnXYo1Wqz"/>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">NETWORK</span>
-<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Trade Corridors &amp; Global Markets</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Opening access to emerging high-growth markets through diplomatic channels.</p>
-</div>
-<!-- Transformation Card -->
-<div class="group cursor-pointer">
-<div class="relative h-64 overflow-hidden mb-6">
-<img alt="Eco-Transformation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, minimalist image representing sustainable energy transformation, featuring a futuristic wind turbine or green energy facility against a soft lavender and white morning sky. The lighting is ethereal and high-key. The composition follows the 'Professional Sophisticate' style with sharp lines and a single red accent indicating progress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0DQ4GndedysWYrgNDeV4v6ZKgTRiiixX8x3xd1NuGkRoNj2-7ruA5KxQBBF1uJ1q6f-LdMognnl1ZpydgmvTAdu6s9QEuXY14Wnbz46n0actE-iNjpMXoEAedHLw-pUK84pMEWLP1Vr2EDVMUoQQKmBiMu3kEfKCqmV7O_pmvBBVbzpa04yGmKs7D_qLhx0KlNIMU0SyPTffY71B1GpnnO-ihYp5dmniNOLfJZTmF_eCx0Xbn03acNAQmqz6-KIESVulGwV8AqZY"/>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">SUSTAINABILITY</span>
-<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Eco-Transformation Protocols</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Guidance for members transitioning to net-zero institutional standards.</p>
-</div>
-<!-- Defense Card -->
-<div class="group cursor-pointer">
-<div class="relative h-64 overflow-hidden mb-6">
-<img alt="Legislative Defense" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dignified judicial or legislative setting with architectural pillars and a focused, professional atmosphere. The lighting is sophisticated, creating depth with soft shadows. The overall aesthetic is editorial, using whites and slate greys with a prestigious navy blue undertone and sharp red graphic markers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kZkThuCU6IW2tsl_QZ45jlSjViueM1ptL3QXw0fJBEBACHFGcoIW4vsqztbBiC1wBuKgHiLet9w2GHs1oV8SUVBC4V3q_VAxqTq83BFX-b150NPEcOVIy13pyA2FZhGWU3wvLT4BvZkTK08R4SWYft0Jv-ykAXJ9TDyLCFHWn5aqI730sfwoxU83OoJ4Qiz4kP2TE71fB8b33rBNUqvQtcBVDD93KD4xJi_QmgQdVkfYSVKcxOV5p5DprbGCXsYBfwKoAxwtvDK8"/>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">ADVOCACY</span>
-<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Legislative Defense &amp; Lobbying</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Protecting private enterprise interests in the 2027 presidential debate.</p>
-</div>
-</div>
-</section>
-<!-- Executive Briefings & Diagonal Side Section -->
-<section class="bg-surface-container-low py-section-padding">
-<div class="px-margin-page max-w-[1440px] mx-auto grid grid-cols-12 gap-gutter-grid">
-<div class="col-span-12 lg:col-span-8">
-<span class="font-label-caps text-label-caps text-secondary mb-4 block">Executive Briefings</span>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Intelligence &amp; News</h2>
-<!-- Briefing List -->
-<div class="flex flex-col gap-0">
-<article class="group py-8 border-t border-outline-variant/40 flex justify-between items-center hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
-<div class="flex flex-col gap-2">
-<span class="font-label-caps text-label-caps text-primary-container">Global Resilience</span>
-<h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">The 2026 Sovereign Debt Outlook for G20 Nations</h4>
-<p class="text-on-surface-variant max-w-2xl">A comprehensive analysis of institutional fiscal policy and the impact on international trade flows.</p>
-</div>
-<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
-</article>
-<article class="group py-8 border-t border-outline-variant/40 flex justify-between items-center hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
-<div class="flex flex-col gap-2">
-<span class="font-label-caps text-label-caps text-primary-container">Digital Sovereignty</span>
-<h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">New Frameworks for European Data Autonomy</h4>
-<p class="text-on-surface-variant max-w-2xl">Legislative updates and strategic imperatives for tech infrastructure investments.</p>
-</div>
-<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
-</article>
-<article class="group py-8 border-t border-b border-outline-variant/40 flex justify-between items-center hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
-<div class="flex flex-col gap-2">
-<span class="font-label-caps text-label-caps text-primary-container">Market Analysis</span>
-<h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Transitioning to Hydrogen: Infrastructure Gap Analysis</h4>
-<p class="text-on-surface-variant max-w-2xl">Economic insights into the hydrogen energy sector's maturation and private sector opportunities.</p>
-</div>
-<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
-</article>
-</div>
-<button class="mt-stack-md border border-primary text-primary font-label-caps text-label-caps py-4 px-8 btn-diagonal hover:bg-primary hover:text-white transition-all">
-                            VIEW ALL BRIEFINGS
-                        </button>
-</div>
-<!-- Diagonal Sidebar -->
-<div class="col-span-12 lg:col-span-4 bg-primary-container text-white p-12 relative overflow-hidden flex flex-col justify-center">
-<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/20" style="clip-path: polygon(100% 0, 100% 100%, 0 0);"></div>
-<h3 class="font-headline-md text-headline-md mb-6 relative z-10">Follow the Movement</h3>
-<ul class="flex flex-col gap-4 relative z-10">
-<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">Economic Insights <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
-<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">Digital Policy <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
-<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">Labor Laws <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
-<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">International Trade <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
-</ul>
-<div class="mt-stack-lg border-l-4 border-secondary pl-6">
-<p class="font-body-md text-body-md italic text-primary-fixed-dim">"Our strength lies in our collective strategic intelligence and institutional agility."</p>
-<p class="mt-4 font-label-caps text-label-caps uppercase">— Chamber Chairman</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Elite Assemblies (Events) -->
-<section class="px-margin-page py-section-padding max-w-[1440px] mx-auto">
-<div class="flex justify-between items-end mb-stack-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary">Elite Assemblies &amp; Summits</h2>
-<a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1" href="#">VIEW CALENDAR</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-grid">
-<!-- Event 1 -->
-<div class="bg-primary flex flex-col md:flex-row h-full overflow-hidden group">
-<div class="md:w-2/5 p-8 flex flex-col justify-between bg-primary-container text-white relative">
-<div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary rotate-45"></div>
-<div class="relative z-10">
-<span class="font-label-caps text-label-caps text-secondary-fixed block mb-2">JUNE 2026</span>
-<span class="font-headline-xl text-headline-xl block">22</span>
-</div>
-<span class="font-label-caps text-label-caps text-on-primary-container">PARIS, FRANCE</span>
-</div>
-<div class="md:w-3/5 p-8 text-white flex flex-col justify-between bg-primary relative overflow-hidden">
-<div class="relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4">Strategic Autonomy Summit: Defending the Single Market</h3>
-<p class="font-body-md text-body-md text-on-primary/70 mb-6">A high-level assembly of industry CEOs and policy makers to discuss market integration.</p>
-</div>
-<button class="bg-white text-primary font-label-caps text-label-caps py-4 px-6 self-start btn-diagonal group-hover:bg-secondary group-hover:text-white transition-all after:bg-primary-container group-hover:after:bg-white">
-                                REGISTER NOW
-                            </button>
-</div>
-</div>
-<!-- Event 2 -->
-<div class="bg-surface-container flex flex-col md:flex-row h-full overflow-hidden group">
-<div class="md:w-2/5 p-8 flex flex-col justify-between bg-outline-variant text-primary relative">
-<div class="relative z-10">
-<span class="font-label-caps text-label-caps text-primary block mb-2">JULY 2026</span>
-<span class="font-headline-xl text-headline-xl block">08</span>
-</div>
-<span class="font-label-caps text-label-caps text-primary">BERLIN, GERMANY</span>
-</div>
-<div class="md:w-3/5 p-8 text-primary flex flex-col justify-between bg-white relative overflow-hidden border border-outline-variant">
-<div class="relative z-10">
-<h3 class="font-headline-md text-headline-md mb-4">The Green Finance Forum: Mobilizing Institutional Capital</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Exploring the intersection of institutional investment and net-zero infrastructure.</p>
-</div>
-<button class="bg-primary text-white font-label-caps text-label-caps py-4 px-6 self-start btn-diagonal hover:bg-secondary transition-all">
-                                REQUEST ACCESS
-                            </button>
-</div>
-</div>
-</div>
-</section>
-<!-- Newsletter Footer Bar -->
-<section class="bg-secondary py-12 px-margin-page">
-<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
-<div class="text-white">
-<h3 class="font-headline-md text-headline-md mb-2">Stay on the move.</h3>
-<p class="font-body-md text-body-md opacity-90">Institutional insights delivered directly to your executive suite.</p>
-</div>
-<div class="flex w-full md:w-auto">
-<input class="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:ring-0 focus:border-white p-4 w-full md:w-80" placeholder="Your corporate email" type="email"/>
-<button class="bg-white text-secondary font-label-caps text-label-caps px-8 py-4 hover:bg-primary-container hover:text-white transition-all uppercase font-bold">Subscribe</button>
-</div>
-</div>
-</section>
-<!-- Footer (As per JSON) -->
-<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-section-padding px-margin-page">
-<div class="w-full flex flex-col md:flex-row justify-between items-start gap-stack-lg max-w-[1440px] mx-auto">
-<div class="flex flex-col gap-6 max-w-sm">
-<div class="font-headline-md text-headline-md text-on-primary dark:text-primary font-bold">Global Commerce Chamber</div>
-<p class="text-surface-variant dark:text-on-surface-variant font-body-md">Empowering global enterprise through collective strategy and institutional excellence.</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary" data-icon="share">share</span>
-<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary" data-icon="public">public</span>
-<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary" data-icon="rss_feed">rss_feed</span>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-16">
-<div class="flex flex-col gap-4">
-<span class="font-label-caps text-label-caps text-surface">RESOURCES</span>
-<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Annual Reports</a>
-<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Media Kit</a>
-<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Compliance</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="font-label-caps text-label-caps text-surface">LEGAL</span>
-<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Protocol</a>
-<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-<div class="max-w-[1440px] mx-auto mt-stack-lg pt-stack-md border-t border-outline-variant/20 flex flex-col md:flex-row justify-between text-surface-variant font-label-caps text-label-caps">
-<span>© 2024 Global Commerce Chamber. All Rights Reserved. Institutional Excellence through Collaboration.</span>
-<div class="flex gap-8 mt-4 md:mt-0">
-<span>EST. 1919</span>
-<span>V.2.0.26</span>
-</div>
-</div>
-</footer>
-</main>
-</div>
-<!-- Floating Action Button (As per Rule - Only for Home/Dash) -->
-<button class="fixed bottom-8 right-8 bg-secondary text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-50">
-<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'FILL' 0, 'wght' 700;">add</span>
-</button>
-<script>
-        // Micro-interactions and atmosphere
-        document.addEventListener('DOMContentLoaded', () => {
-            // Header scroll effect
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    header.classList.add('shadow-lg');
-                } else {
-                    header.classList.remove('shadow-lg');
-                }
-            });
 
-            // Smooth parallax simple
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const heroImg = document.querySelector('.relative.min-h-\\[600px\\] img');
-                if(heroImg) {
-                    heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
-                }
-            });
-        });
-    </script>
-</body></html>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-white">
+  <!-- Top Navigation Anchor (As per JSON) -->
+  <header class="bg-surface border-b border-outline-variant/30 sticky top-0 z-50 shadow-sm">
+    <nav class="flex justify-between items-center w-full px-margin-page py-4 max-w-[1440px] mx-auto">
+      <div class="flex items-center gap-4">
+        <img alt="PIOCCI Logo" src="logo.png" class="h-16 w-auto object-contain flex-shrink-0" />
+        <div class="flex flex-col leading-tight select-none">
+          <span
+            style="font-size:20px;font-weight:800;color:#04005c;letter-spacing:.01em;text-transform:uppercase;line-height:1.15;">People
+            of Indian Origin</span>
+          <span
+            style="font-size:17px;font-weight:700;color:#04005c;letter-spacing:.01em;text-transform:uppercase;line-height:1.2;">Chamber
+            of Commerce and Industry</span>
+          <span style="display:block;height:1.5px;background:#04005c;margin:4px 0 3px;"></span>
+          <span
+            style="font-size:9.5px;font-weight:700;color:#04005c;letter-spacing:.18em;text-transform:uppercase;line-height:1;">Global
+            Business Networking Platform for Indian Diaspora</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden sm:inline-block font-label-caps text-label-caps px-5 py-2 transition-all duration-200"
+          style="border:2px solid #AD3300;color:#AD3300;"
+          onmouseover="this.style.background='#AD3300';this.style.color='#fff'"
+          onmouseout="this.style.background='transparent';this.style.color='#AD3300'">Membership</a>
+        <button id="navToggle" onclick="toggleCircleNav()" aria-label="Open navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Backdrop (click to close) -->
+  <div id="navOverlay" onclick="closeCircleNav()"></div>
+
+  <!--
+    QUARTER-CIRCLE NAV
+    Each .arc-item is anchored at right:0 top:0 (the top-right corner = circle centre).
+    transform-origin: right top  → rotating the arm like a clock hand.
+    The arm extends LEFT by 400px (≈ clip radius).
+    Text is left-aligned, so it STARTS at the arc edge and reads toward the centre.
+    --angle drives both the rotation and the stagger-slide.
+  -->
+  <nav id="circleNav" aria-label="Site navigation">
+    <!-- X button — top-right corner of the visible circle -->
+    <button id="circleCloseBtn" onclick="closeCircleNav()" aria-label="Close navigation">✕</button>
+    <ul>
+      <li class="arc-item" style="transform:rotate(10deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">Home</a></li>
+      <li class="arc-item" style="transform:rotate(22deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">About Us</a></li>
+      <li class="arc-item" style="transform:rotate(34deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">Events</a></li>
+      <li class="arc-item" style="transform:rotate(46deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">Gallery</a></li>
+      <li class="arc-item" style="transform:rotate(58deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">Membership</a></li>
+      <li class="arc-item" style="transform:rotate(70deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">Biennial 2025</a></li>
+      <li class="arc-item" style="transform:rotate(80deg);"><a href="#" class="arc-link" onclick="closeCircleNav()">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="flex">
+    <!-- Sidebar Navigation (As per JSON) -->
+    <!-- Main Content Canvas -->
+    <main class="w-full">
+      <!-- Hero Section -->
+      <section class="relative min-h-[600px] flex items-center overflow-hidden">
+        <img alt="Corporate Headquarters" class="absolute inset-0 w-full h-full object-cover"
+          data-alt="A professional, low-angle photograph of a towering modern glass skyscraper against a clear blue sky, reflecting the surrounding urban corporate landscape. The lighting is crisp and natural, emphasizing the architectural lines and prestigious institutional atmosphere. The scene evokes high-level corporate commerce and strategic leadership, maintaining a minimalist and airy light-mode aesthetic with deep navy shadows and subtle red highlights."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5Ff-FF0zddPiESjICZ4lcr3bTKCm9jCW3KN25I9-0OlJ8lW-3nmMcfzJqtVWNIxyDuEIQJPbqTtyIWjAP5l6deXclu1U2o-HFa74zaBNpsgfoaP_aiOoXMTwGv7iwQF_2ieD3Ghz_gNlwx_F6LgZ4y0cgD8fcEb4B4bmsQTcjlqMIuzm8DXckFUrnfv1887Z3SVSeJhXAKGvivLBrhJHnisMzwux5RW--YFRCJLjecbEW_z7JgThbX6W5vUxNY1QhDX7kpaLW773" />
+        <div class="absolute inset-0 bg-primary-container/40"></div>
+        <div class="relative z-10 px-margin-page py-section-padding text-white max-w-4xl">
+          <span
+            class="bg-secondary text-white font-label-caps text-label-caps px-4 py-2 mb-6 inline-block">Institutional
+            Excellence</span>
+          <h1 class="font-headline-xl text-headline-xl mb-8">Global Business Networking: Powering the Future Economy.
+          </h1>
+          <button
+            class="bg-primary hover:bg-primary/90 text-white font-label-caps text-label-caps py-5 px-8 btn-diagonal transition-all">
+            JOIN THE MOVEMENT
+          </button>
+        </div>
+        <div class="absolute bottom-0 right-0 w-1/2 h-24 bg-surface"
+          style="clip-path: polygon(100% 0, 100% 100%, 0 100%);"></div>
+      </section>
+      <!-- Strategic Initiatives: Horizontal Bento Grid -->
+      <section class="px-margin-page py-section-padding max-w-[1440px] mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-outline-variant/30 pb-6">
+          <div>
+            <span class="font-label-caps text-label-caps text-secondary uppercase block mb-2">Strategic Vision</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Initiatives of the Chamber</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-grid">
+          <!-- Dubai Event Card -->
+          <div class="group cursor-pointer">
+            <div class="relative h-64 overflow-hidden mb-6">
+              <img alt="Event in Dubai"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmTLoxyw9G3EOISvvWAEneGkvflkIXRmfAAA3lbNrQVzePS6jts1Npm5QpBg3R16vOeBeMmN46qq0lnZLRK5jSLQMkJkFLHF9Q3n6ApeU_wNZZoYRgeLhQX1HoV4BgTQ15FhOFgwgmG9SdXpoAru7UzNtZxPiRiZJgTtnDTK_RZyGSUxgbXo97SPo99XlCM73N9iuIE5Y-5LiQFV6jdKztYUlk81hRLI5qwEgb-6zqVZDnwcqWZqRVubLOHyIwQEp72pQgnXYo1Wqz" />
+            </div>
+            <span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">EVENT</span>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">
+              Event In Dubai :- (25th June 2019)</h3>
+            <p class="font-body-md text-body-md mt-4 text-on-surface-variant">PIOCCI Gulf Chapter event connecting
+              Indian diaspora business leaders in Dubai.</p>
+          </div>
+          <!-- HP CM Card -->
+          <div class="group cursor-pointer">
+            <div class="relative h-64 overflow-hidden mb-6">
+              <img alt="Himachal Pradesh CM meets PIOCCI Gulf Chapter in Dubai"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0DQ4GndedysWYrgNDeV4v6ZKgTRiiixX8x3xd1NuGkRoNj2-7ruA5KxQBBF1uJ1q6f-LdMognnl1ZpydgmvTAdu6s9QEuXY14Wnbz46n0actE-iNjpMXoEAedHLw-pUK84pMEWLP1Vr2EDVMUoQQKmBiMu3kEfKCqmV7O_pmvBBVbzpa04yGmKs7D_qLhx0KlNIMU0SyPTffY71B1GpnnO-ihYp5dmniNOLfJZTmF_eCx0Xbn03acNAQmqz6-KIESVulGwV8AqZY" />
+            </div>
+            <span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">DIPLOMACY</span>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">
+              Himachal Pradesh CM meets PIOCCI Gulf Chapter in Dubai</h3>
+            <p class="font-body-md text-body-md mt-4 text-on-surface-variant">Strengthening India-UAE bilateral ties
+              through diaspora engagement and leadership.</p>
+          </div>
+          <!-- ARSP Card -->
+          <div class="group cursor-pointer">
+            <div class="relative h-64 overflow-hidden mb-6">
+              <img alt="ARSP and PIOCCI with Mahatma Gandhi Institute"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kZkThuCU6IW2tsl_QZ45jlSjViueM1ptL3QXw0fJBEBACHFGcoIW4vsqztbBiC1wBuKgHiLet9w2GHs1oV8SUVBC4V3q_VAxqTq83BFX-b150NPEcOVIy13pyA2FZhGWU3wvLT4BvZkTK08R4SWYft0Jv-ykAXJ9TDyLCFHWn5aqI730sfwoxU83OoJ4Qiz4kP2TE71fB8b33rBNUqvQtcBVDD93KD4xJi_QmgQdVkfYSVKcxOV5p5DprbGCXsYBfwKoAxwtvDK8" />
+            </div>
+            <span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">COLLABORATION</span>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">
+              Antar Rashtriya Sahayog Parishad (ARSP) and People of Indian Origin Chamber of Commerce and Industry
+              (PIOCCI) In Association with Mahatma Gandhi Institute &amp; Pravasi Ghat Trust</h3>
+          </div>
+        </div>
+      </section>
+      <!-- Executive Briefings & Diagonal Side Section -->
+      <section class="bg-surface-container-low py-section-padding">
+        <div class="px-margin-page max-w-[1440px] mx-auto grid grid-cols-12 gap-gutter-grid">
+          <div class="col-span-12 lg:col-span-8">
+            <span class="font-label-caps text-label-caps text-secondary mb-4 block">Latest Updates</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Global Chapters Updates</h2>
+            <!-- Updates List -->
+            <div class="flex flex-col gap-0">
+              <article
+                class="group py-8 border-t border-outline-variant/40 flex justify-between items-start hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
+                <div class="flex flex-col gap-2">
+                  <span class="font-label-caps text-label-caps text-primary-container">India</span>
+                  <h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Minister of
+                    State at PIOCCI Conclave, Bharat Mandapam</h4>
+                  <p class="text-on-surface-variant max-w-2xl">Minister of State of External Affairs Smt. Meenkashi
+                    Lekhi at PIOCCI conclave at IndiaSoft event at Bharat Mandapam, Delhi.</p>
+                </div>
+                <span
+                  class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-icon="north_east">north_east</span>
+              </article>
+              <article
+                class="group py-8 border-t border-outline-variant/40 flex justify-between items-start hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
+                <div class="flex flex-col gap-2">
+                  <span class="font-label-caps text-label-caps text-primary-container">Dubai</span>
+                  <h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">PIOCCI
+                    Conclave at the India Club, Dubai — GITEX 2023</h4>
+                  <p class="text-on-surface-variant max-w-2xl">PIOCCI Conclave at the India Club, Dubai, with
+                    international and PIOCCI Gulf members and Indian startups along with ESC (Indian Ministry of
+                    Commerce and Industry) and Madhya Pradesh state officials at the prestigious Gulf Information
+                    Technology Exhibition (GITEX) event in Oct. 2023.</p>
+                </div>
+                <span
+                  class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-icon="north_east">north_east</span>
+              </article>
+              <article
+                class="group py-8 border-t border-b border-outline-variant/40 flex justify-between items-start hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
+                <div class="flex flex-col gap-2">
+                  <span class="font-label-caps text-label-caps text-primary-container">Canada, Germany, Australia &amp;
+                    London</span>
+                  <h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Meetings of
+                    International and Local Members of PIOCCI</h4>
+                  <p class="text-on-surface-variant max-w-2xl">Meetings of international and local members of PIOCCI
+                    across Canada, Germany, Australia and London — strengthening the global diaspora network.</p>
+                </div>
+                <span
+                  class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-icon="north_east">north_east</span>
+              </article>
+            </div>
+            <button
+              class="mt-stack-md border border-primary text-primary font-label-caps text-label-caps py-4 px-8 btn-diagonal hover:bg-primary hover:text-white transition-all">
+              VIEW ALL UPDATES
+            </button>
+          </div>
+          <!-- Diagonal Sidebar -->
+          <div
+            class="col-span-12 lg:col-span-4 bg-primary-container text-white p-12 relative overflow-hidden flex flex-col justify-center">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/20"
+              style="clip-path: polygon(100% 0, 100% 100%, 0 0);"></div>
+            <h3 class="font-headline-md text-headline-md mb-6 relative z-10">Global Chapters</h3>
+            <ul class="flex flex-col gap-4 relative z-10">
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">Africa <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">America <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">Asia <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">Europe <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">Latin America &amp; Caribbean <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">Oceania <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+              <li><a
+                  class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center"
+                  href="#">South America <span class="material-symbols-outlined text-sm"
+                    data-icon="arrow_forward">arrow_forward</span></a></li>
+            </ul>
+            <div class="mt-stack-lg border-l-4 border-secondary pl-6">
+              <p class="font-body-md text-body-md italic text-primary-fixed-dim">"Our strength lies in our collective
+                strategic intelligence and institutional agility."</p>
+              <p class="mt-4 font-label-caps text-label-caps uppercase">— Chamber Chairman</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Videos -->
+      <section class="relative overflow-hidden bg-primary py-section-padding">
+        <!-- Big decorative circle — right side, echoing the nav arc aesthetic -->
+        <div class="pointer-events-none absolute -right-32 top-1/2 -translate-y-1/2 w-[540px] h-[540px] rounded-full"
+          style="background:radial-gradient(circle at 60% 50%,#1a1b6e 0%,#04005c 55%,#020240 100%);box-shadow:inset -8px 0 40px 0 rgba(173,51,0,0.18);border:1.5px solid rgba(255,255,255,0.07);"></div>
+
+        <div class="relative z-10 px-margin-page max-w-[1440px] mx-auto">
+          <!-- Header row -->
+          <div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg">
+            <div>
+              <span class="font-label-caps text-label-caps block mb-2" style="color:#ff7a3d;">Media Library</span>
+              <h2 class="font-headline-lg text-headline-lg text-white">Featured Videos</h2>
+            </div>
+            <a class="font-label-caps text-label-caps pb-1 mt-4 md:mt-0" href="#"
+              style="color:#ff7a3d;border-bottom:1.5px solid #ff7a3d;">VIEW ALL VIDEOS</a>
+          </div>
+
+          <!-- Video grid: 1 large + 2 small -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-grid">
+            <!-- Main featured video -->
+            <div class="md:col-span-7 group cursor-pointer">
+              <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
+                <img alt="PIOCCI Conclave at Bharat Mandapam"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5Ff-FF0zddPiESjICZ4lcr3bTKCm9jCW3KN25I9-0OlJ8lW-3nmMcfzJqtVWNIxyDuEIQJPbqTtyIWjAP5l6deXclu1U2o-HFa74zaBNpsgfoaP_aiOoXMTwGv7iwQF_2ieD3Ghz_gNlwx_F6LgZ4y0cgD8fcEb4B4bmsQTcjlqMIuzm8DXckFUrnfv1887Z3SVSeJhXAKGvivLBrhJHnisMzwux5RW--YFRCJLjecbEW_z7JgThbX6W5vUxNY1QhDX7kpaLW773" />
+                <div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all duration-300"></div>
+                <!-- Play button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-16 h-16 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                    style="background:#AD3300;box-shadow:0 0 0 8px rgba(173,51,0,0.25);">
+                    <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings:'FILL' 1,'wght' 700;">play_arrow</span>
+                  </div>
+                </div>
+                <!-- Duration badge -->
+                <span class="absolute bottom-3 right-3 bg-black/70 text-white font-label-caps text-label-caps px-2 py-1">12:34</span>
+              </div>
+              <div class="mt-4">
+                <span class="font-label-caps text-label-caps block mb-1" style="color:#ff7a3d;">CONCLAVE · DELHI</span>
+                <h3 class="font-headline-md text-headline-md text-white transition-colors" style="transition:color .2s;" onmouseover="this.style.color='#ff7a3d'" onmouseout="this.style.color='#fff'">
+                  PIOCCI Conclave — IndiaSoft, Bharat Mandapam</h3>
+                <p class="font-body-md text-body-md text-white/60 mt-2">Minister of State of External Affairs Smt. Meenakashi Lekhi addresses the PIOCCI diaspora conclave.</p>
+              </div>
+            </div>
+
+            <!-- Side videos -->
+            <div class="md:col-span-5 flex flex-col gap-gutter-grid">
+              <!-- Video 2 -->
+              <div class="group cursor-pointer flex gap-4 items-start">
+                <div class="relative flex-shrink-0 w-36 overflow-hidden" style="aspect-ratio:16/9;">
+                  <img alt="PIOCCI Gulf Chapter Dubai GITEX"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmTLoxyw9G3EOISvvWAEneGkvflkIXRmfAAA3lbNrQVzePS6jts1Npm5QpBg3R16vOeBeMmN46qq0lnZLRK5jSLQMkJkFLHF9Q3n6ApeU_wNZZoYRgeLhQX1HoV4BgTQ15FhOFgwgmG9SdXpoAru7UzNtZxPiRiZJgTtnDTK_RZyGSUxgbXo97SPo99XlCM73N9iuIE5Y-5LiQFV6jdKztYUlk81hRLI5qwEgb-6zqVZDnwcqWZqRVubLOHyIwQEp72pQgnXYo1Wqz" />
+                  <div class="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:#AD3300;">
+                      <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL' 1,'wght' 700;">play_arrow</span>
+                    </div>
+                  </div>
+                  <span class="absolute bottom-1 right-1 bg-black/70 text-white text-[10px] font-bold px-1">08:17</span>
+                </div>
+                <div class="flex-1">
+                  <span class="font-label-caps text-label-caps block mb-1" style="color:#ff7a3d;">GULF · GITEX 2023</span>
+                  <h4 class="font-headline-md text-headline-md text-white text-[16px] leading-snug transition-colors" onmouseover="this.style.color='#ff7a3d'" onmouseout="this.style.color='#fff'">
+                    PIOCCI Conclave at India Club, Dubai</h4>
+                  <p class="font-body-md text-body-md text-white/50 text-sm mt-1">Gulf chapter meets with Indian startups and ESC officials at GITEX.</p>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="border-t border-white/10"></div>
+
+              <!-- Video 3 -->
+              <div class="group cursor-pointer flex gap-4 items-start">
+                <div class="relative flex-shrink-0 w-36 overflow-hidden" style="aspect-ratio:16/9;">
+                  <img alt="ARSP PIOCCI Mahatma Gandhi Institute"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kZkThuCU6IW2tsl_QZ45jlSjViueM1ptL3QXw0fJBEBACHFGcoIW4vsqztbBiC1wBuKgHiLet9w2GHs1oV8SUVBC4V3q_VAxqTq83BFX-b150NPEcOVIy13pyA2FZhGWU3wvLT4BvZkTK08R4SWYft0Jv-ykAXJ9TDyLCFHWn5aqI730sfwoxU83OoJ4Qiz4kP2TE71fB8b33rBNUqvQtcBVDD93KD4xJi_QmgQdVkfYSVKcxOV5p5DprbGCXsYBfwKoAxwtvDK8" />
+                  <div class="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:#AD3300;">
+                      <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL' 1,'wght' 700;">play_arrow</span>
+                    </div>
+                  </div>
+                  <span class="absolute bottom-1 right-1 bg-black/70 text-white text-[10px] font-bold px-1">06:52</span>
+                </div>
+                <div class="flex-1">
+                  <span class="font-label-caps text-label-caps block mb-1" style="color:#ff7a3d;">COLLABORATION</span>
+                  <h4 class="font-headline-md text-headline-md text-white text-[16px] leading-snug transition-colors" onmouseover="this.style.color='#ff7a3d'" onmouseout="this.style.color='#fff'">
+                    ARSP × PIOCCI — Mahatma Gandhi Institute</h4>
+                  <p class="font-body-md text-body-md text-white/50 text-sm mt-1">Partnership signing with Pravasi Ghat Trust and the Mahatma Gandhi Institute.</p>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="border-t border-white/10"></div>
+
+              <!-- HP CM video -->
+              <div class="group cursor-pointer flex gap-4 items-start">
+                <div class="relative flex-shrink-0 w-36 overflow-hidden" style="aspect-ratio:16/9;">
+                  <img alt="HP CM meets PIOCCI Gulf Chapter"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0DQ4GndedysWYrgNDeV4v6ZKgTRiiixX8x3xd1NuGkRoNj2-7ruA5KxQBBF1uJ1q6f-LdMognnl1ZpydgmvTAdu6s9QEuXY14Wnbz46n0actE-iNjpMXoEAedHLw-pUK84pMEWLP1Vr2EDVMUoQQKmBiMu3kEfKCqmV7O_pmvBBVbzpa04yGmKs7D_qLhx0KlNIMU0SyPTffY71B1GpnnO-ihYp5dmniNOLfJZTmF_eCx0Xbn03acNAQmqz6-KIESVulGwV8AqZY" />
+                  <div class="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:#AD3300;">
+                      <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL' 1,'wght' 700;">play_arrow</span>
+                    </div>
+                  </div>
+                  <span class="absolute bottom-1 right-1 bg-black/70 text-white text-[10px] font-bold px-1">05:10</span>
+                </div>
+                <div class="flex-1">
+                  <span class="font-label-caps text-label-caps block mb-1" style="color:#ff7a3d;">DIPLOMACY · DUBAI</span>
+                  <h4 class="font-headline-md text-headline-md text-white text-[16px] leading-snug transition-colors" onmouseover="this.style.color='#ff7a3d'" onmouseout="this.style.color='#fff'">
+                    HP CM meets PIOCCI Gulf Chapter</h4>
+                  <p class="font-body-md text-body-md text-white/50 text-sm mt-1">Himachal Pradesh Chief Minister strengthens India-UAE diaspora ties.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Elite Assemblies (Events) -->
+      <section class="px-margin-page py-section-padding max-w-[1440px] mx-auto">
+        <div class="flex justify-between items-end mb-stack-lg">
+          <h2 class="font-headline-lg text-headline-lg text-primary">Events</h2>
+          <a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1" href="#">VIEW
+            CALENDAR</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-grid">
+          <!-- Event 1 -->
+          <div class="bg-primary flex flex-col md:flex-row h-full overflow-hidden group">
+            <div class="md:w-2/5 p-8 flex flex-col justify-between bg-primary-container text-white relative">
+              <div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary rotate-45"></div>
+              <div class="relative z-10">
+                <span class="font-label-caps text-label-caps text-secondary-fixed block mb-2">JUNE 2026</span>
+                <span class="font-headline-xl text-headline-xl block">22</span>
+              </div>
+              <span class="font-label-caps text-label-caps text-on-primary-container">PARIS, FRANCE</span>
+            </div>
+            <div class="md:w-3/5 p-8 text-white flex flex-col justify-between bg-primary relative overflow-hidden">
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md mb-4">Strategic Autonomy Summit: Defending the Single
+                  Market</h3>
+                <p class="font-body-md text-body-md text-on-primary/70 mb-6">A high-level assembly of industry CEOs and
+                  policy makers to discuss market integration.</p>
+              </div>
+              <button
+                class="bg-white text-primary font-label-caps text-label-caps py-4 px-6 self-start btn-diagonal group-hover:bg-secondary group-hover:text-white transition-all after:bg-primary-container group-hover:after:bg-white">
+                REGISTER NOW
+              </button>
+            </div>
+          </div>
+          <!-- Event 2 -->
+          <div class="bg-surface-container flex flex-col md:flex-row h-full overflow-hidden group">
+            <div class="md:w-2/5 p-8 flex flex-col justify-between bg-outline-variant text-primary relative">
+              <div class="relative z-10">
+                <span class="font-label-caps text-label-caps text-primary block mb-2">JULY 2026</span>
+                <span class="font-headline-xl text-headline-xl block">08</span>
+              </div>
+              <span class="font-label-caps text-label-caps text-primary">BERLIN, GERMANY</span>
+            </div>
+            <div
+              class="md:w-3/5 p-8 text-primary flex flex-col justify-between bg-white relative overflow-hidden border border-outline-variant">
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md mb-4">The Green Finance Forum: Mobilizing Institutional
+                  Capital</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6">Exploring the intersection of
+                  institutional investment and net-zero infrastructure.</p>
+              </div>
+              <button
+                class="bg-primary text-white font-label-caps text-label-caps py-4 px-6 self-start btn-diagonal hover:bg-secondary transition-all">
+                REQUEST ACCESS
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter Footer Bar -->
+      <section class="bg-secondary py-12 px-margin-page">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+          <div class="text-white">
+            <h3 class="font-headline-md text-headline-md mb-2">Stay on the move.</h3>
+            <p class="font-body-md text-body-md opacity-90">Institutional insights delivered directly to your executive
+              suite.</p>
+          </div>
+          <div class="flex w-full md:w-auto">
+            <input
+              class="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:ring-0 focus:border-white p-4 w-full md:w-80"
+              placeholder="Your corporate email" type="email" />
+            <button
+              class="bg-white text-secondary font-label-caps text-label-caps px-8 py-4 hover:bg-primary-container hover:text-white transition-all uppercase font-bold">Subscribe</button>
+          </div>
+        </div>
+      </section>
+      <!-- Footer (As per JSON) -->
+      <footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-section-padding px-margin-page">
+        <div class="w-full flex flex-col md:flex-row justify-between items-start gap-stack-lg max-w-[1440px] mx-auto">
+          <div class="flex flex-col gap-6 max-w-sm">
+            <div class="font-headline-md text-headline-md text-on-primary dark:text-primary font-bold">Global Commerce
+              Chamber</div>
+            <p class="text-surface-variant dark:text-on-surface-variant font-body-md">Empowering global enterprise
+              through collective strategy and institutional excellence.</p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary"
+                data-icon="share">share</span>
+              <span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary"
+                data-icon="public">public</span>
+              <span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary"
+                data-icon="rss_feed">rss_feed</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-16">
+            <div class="flex flex-col gap-4">
+              <span class="font-label-caps text-label-caps text-surface">RESOURCES</span>
+              <a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Annual
+                Reports</a>
+              <a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Media Kit</a>
+              <a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Compliance</a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <span class="font-label-caps text-label-caps text-surface">LEGAL</span>
+              <a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Privacy
+                Protocol</a>
+              <a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Terms of
+                Service</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-[1440px] mx-auto mt-stack-lg pt-stack-md border-t border-outline-variant/20 flex flex-col md:flex-row justify-between text-surface-variant font-label-caps text-label-caps">
+          <span>© 2024 Global Commerce Chamber. All Rights Reserved. Institutional Excellence through
+            Collaboration.</span>
+          <div class="flex gap-8 mt-4 md:mt-0">
+            <span>EST. 1919</span>
+            <span>V.2.0.26</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <!-- scripts → script.js -->
+  <script src="script.js"></script>
+</body>
+
+</html>
