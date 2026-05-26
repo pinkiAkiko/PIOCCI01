@@ -26,18 +26,15 @@ function openCircleNav() {
   document.getElementById('circleNav').classList.add('open');
   document.getElementById('navOverlay').classList.add('open');
   document.getElementById('navToggle').classList.add('open');
-  /* stagger each arc item */
-  document.querySelectorAll('.arc-item').forEach(function (el, i) {
-    el.style.transitionDelay = (0.12 + i * 0.06) + 's';
-  });
+  /* CSS nth-child handles stagger delays — no inline override needed */
 }
 
 function closeCircleNav() {
   document.getElementById('circleNav').classList.remove('open');
   document.getElementById('navOverlay').classList.remove('open');
   document.getElementById('navToggle').classList.remove('open');
-  /* reset stagger so next open re-animates cleanly */
-  document.querySelectorAll('.arc-item').forEach(function (el) {
+  /* reset any inline delays so closing is instant */
+  document.querySelectorAll('.arc-link').forEach(function (el) {
     el.style.transitionDelay = '0s';
   });
 }

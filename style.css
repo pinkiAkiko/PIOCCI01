@@ -8,10 +8,15 @@
   vertical-align: middle;
 }
 
+/* ── Video list scrollbar ── */
+.video-list-scroll::-webkit-scrollbar { width: 4px; }
+.video-list-scroll::-webkit-scrollbar-track { background: transparent; }
+.video-list-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+
 /* ── Diagonal arrow button ── */
 .btn-diagonal {
   position: relative;
-  padding-right: 48px;
+  padding-right: 60px;
   overflow: hidden;
 }
 .btn-diagonal::after {
@@ -19,8 +24,8 @@
   font-family: 'Material Symbols Outlined';
   position: absolute;
   right: 0; top: 0; bottom: 0;
-  width: 40px;
-  background: #AD3300;
+  width: 48px;
+  background: #FF5722;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,8 +129,8 @@
   transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s, border-color 0.2s;
 }
 #circleCloseBtn:hover {
-  background: #AD3300;
-  border-color: #AD3300;
+  background: #FF5722;
+  border-color: #FF5722;
 }
 #circleNav.open #circleCloseBtn {
   opacity: 1;
@@ -134,10 +139,10 @@
 }
 
 /* ── Arc item list ──
-   Each li is anchored at the top-right corner (right:0, top:0).
-   width = arm length (~radius).
-   transform-origin: right top  → rotates like a clock hand from the corner.
-   Text is left-aligned → starts at the arc edge, reads toward centre. */
+   Each li arm is anchored at top-right corner (= circle centre).
+   width ≈ circle radius so the arm reaches the perimeter.
+   transform-origin: right top → rotates like a clock hand.
+   Text starts at the LEFT (perimeter) and reads inward toward centre. */
 #circleNav ul {
   position: absolute;
   inset: 0;
@@ -150,43 +155,57 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 400px;
+  width: 430px;        /* reaches close to the 440px clip radius */
   transform-origin: right top;
-  pointer-events: all;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
-#circleNav.open .arc-item { opacity: 1; }
+#circleNav.open .arc-item { pointer-events: all; }
 
-/* Staggered delays — applied via JS (see script.js) */
-
+/* ── Arc link — hidden by default, slides in from perimeter when open ── */
 .arc-link {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 3px 0 3px 16px;
-  color: rgba(255,255,255,0.82);
-  font-family: Tobias, 'Times New Roman', Georgia, serif;
-  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  color: rgba(255,255,255,0.9);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.2s, letter-spacing 0.2s;
+  /* start invisible, offset outward (positive X = toward perimeter in rotated space) */
+  opacity: 0;
+  transform: translateX(22px);
+  transition: opacity 0.4s ease, transform 0.4s ease, color 0.2s ease, letter-spacing 0.2s ease;
 }
-.arc-link:hover { color: #fff; letter-spacing: 0.22em; }
 
+/* Reveal + slide in when nav opens */
+#circleNav.open .arc-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger each item so they cascade in from the perimeter */
+#circleNav.open li:nth-child(1) .arc-link { transition-delay: 0.20s; }
+#circleNav.open li:nth-child(2) .arc-link { transition-delay: 0.26s; }
+#circleNav.open li:nth-child(3) .arc-link { transition-delay: 0.32s; }
+#circleNav.open li:nth-child(4) .arc-link { transition-delay: 0.38s; }
+#circleNav.open li:nth-child(5) .arc-link { transition-delay: 0.44s; }
+#circleNav.open li:nth-child(6) .arc-link { transition-delay: 0.50s; }
+#circleNav.open li:nth-child(7) .arc-link { transition-delay: 0.56s; }
+
+.arc-link:hover { color: #FF5722; letter-spacing: 0.20em; }
+
+/* Orange tick line at the perimeter → signals start-from-border */
 .arc-link::before {
   content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #AD3300;
-  margin-right: 9px;
-  vertical-align: middle;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #FF5722;
   flex-shrink: 0;
-  transition: transform 0.2s;
+  margin-right: 11px;
+  transition: width 0.2s ease;
 }
-.arc-link:hover::before { transform: scale(1.6); }
+.arc-link:hover::before { width: 38px; }
