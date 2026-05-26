@@ -33,10 +33,6 @@ function closeCircleNav() {
   document.getElementById('circleNav').classList.remove('open');
   document.getElementById('navOverlay').classList.remove('open');
   document.getElementById('navToggle').classList.remove('open');
-  /* reset any inline delays so closing is instant */
-  document.querySelectorAll('.arc-link').forEach(function (el) {
-    el.style.transitionDelay = '0s';
-  });
 }
 
 function toggleCircleNav() {

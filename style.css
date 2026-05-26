@@ -161,51 +161,20 @@
 }
 #circleNav.open .arc-item { pointer-events: all; }
 
-/* ── Arc link — hidden by default, slides in from perimeter when open ── */
+/* ── Arc link — always fully visible; clip-path on parent handles reveal ── */
 .arc-link {
-  display: flex;
-  align-items: center;
-  padding: 5px 0;
-  color: rgba(255,255,255,0.9);
+  display: block;
+  padding: 4px 0;
+  color: #ffffff;
   font-family: Inter, system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  /* start invisible, offset outward (positive X = toward perimeter in rotated space) */
-  opacity: 0;
-  transform: translateX(22px);
-  transition: opacity 0.4s ease, transform 0.4s ease, color 0.2s ease, letter-spacing 0.2s ease;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
 }
 
-/* Reveal + slide in when nav opens */
-#circleNav.open .arc-link {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Stagger each item so they cascade in from the perimeter */
-#circleNav.open li:nth-child(1) .arc-link { transition-delay: 0.20s; }
-#circleNav.open li:nth-child(2) .arc-link { transition-delay: 0.26s; }
-#circleNav.open li:nth-child(3) .arc-link { transition-delay: 0.32s; }
-#circleNav.open li:nth-child(4) .arc-link { transition-delay: 0.38s; }
-#circleNav.open li:nth-child(5) .arc-link { transition-delay: 0.44s; }
-#circleNav.open li:nth-child(6) .arc-link { transition-delay: 0.50s; }
-#circleNav.open li:nth-child(7) .arc-link { transition-delay: 0.56s; }
-
-.arc-link:hover { color: #FF5722; letter-spacing: 0.20em; }
-
-/* Orange tick line at the perimeter → signals start-from-border */
-.arc-link::before {
-  content: '';
-  display: block;
-  width: 26px;
-  height: 2px;
-  background: #FF5722;
-  flex-shrink: 0;
-  margin-right: 11px;
-  transition: width 0.2s ease;
-}
+.arc-link:hover { color: #FF5722; letter-spacing: 0.16em; }
 .arc-link:hover::before { width: 38px; }
