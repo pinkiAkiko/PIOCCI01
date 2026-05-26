@@ -37,7 +37,7 @@
   top: 0;
   bottom: 0;
   width: 48px;
-  background: #FF5722;
+  background: #FF3D00;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +50,11 @@
   color: #04005c;
   padding: 4px 12px;
   display: inline-block;
+}
+
+.group h3,
+.group h4 {
+  font-weight: 500 !important;
 }
 
 .bg-slope {
@@ -166,8 +171,8 @@
 }
 
 #circleCloseBtn:hover {
-  background: #FF5722;
-  border-color: #FF5722;
+  background: #FF3D00;
+  border-color: #FF3D00;
 }
 
 #circleNav.open #circleCloseBtn {
@@ -216,5 +221,5 @@
 }
 
 .arc-link:hover {
-  color: #FF5722;
+  color: #FF3D00;
 }
