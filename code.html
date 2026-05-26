@@ -1,703 +1,457 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PIOCCI – People of Indian Origin Chamber of Commerce and Industry</title>
+<title>Global Commerce Chamber | Institutional Excellence</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "pnav":   "#0D1257",
-        "pnavmid":"#1B2580",
-        "porg":   "#E86400",
-        "porglt": "#FF8C00",
-        "pred":   "#D42027",
-        "pgr":    "#138808",
-        "primary": "#0D1257",
-        "primary-container": "#1B2580",
-        "on-primary": "#ffffff",
-        "secondary": "#E86400",
-        "on-secondary": "#ffffff",
-        "surface": "#FFFFFF",
-        "surface-container": "#F4F3FF",
-        "surface-container-low": "#F9F8FF",
-        "surface-container-high": "#EDEAF5",
-        "on-surface": "#1A1A2E",
-        "on-surface-variant": "#4A4A6A",
-        "outline-variant": "#C5C3D5",
-        "background": "#FFFFFF"
-      },
-      borderRadius: { "DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px" },
-      spacing: {
-        "stack-lg":"64px","stack-md":"24px","gutter-grid":"24px",
-        "stack-sm":"8px","section-padding":"80px","margin-page":"5vw"
-      },
-      fontFamily: { "sans":["Manrope","sans-serif"] },
-      fontSize: {
-        "label-caps":["12px",{"lineHeight":"1.2","letterSpacing":"0.1em","fontWeight":"700"}],
-        "headline-xl":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"800"}],
-        "headline-md":["24px",{"lineHeight":"1.3","fontWeight":"700"}],
-        "body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}],
-        "body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],
-        "headline-lg":["32px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}]
-      }
-    }
-  }
-}
-</script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#eae8e7",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fbf9f8",
+                        "outline-variant": "#c7c5d3",
+                        "on-surface": "#1b1c1c",
+                        "surface-variant": "#e4e2e2",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "primary": "#04005c",
+                        "surface-tint": "#5356a6",
+                        "secondary-container": "#e9052a",
+                        "on-primary-fixed": "#0b0961",
+                        "primary-fixed": "#e1e0ff",
+                        "surface": "#fbf9f8",
+                        "on-tertiary-fixed-variant": "#444650",
+                        "on-tertiary-container": "#8f919c",
+                        "tertiary-fixed-dim": "#c4c6d1",
+                        "tertiary-container": "#272a33",
+                        "surface-container-highest": "#e4e2e2",
+                        "surface-container-low": "#f5f3f3",
+                        "on-primary-fixed-variant": "#3b3d8d",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#191b24",
+                        "inverse-surface": "#303030",
+                        "primary-container": "#1d1e6f",
+                        "on-secondary-fixed": "#410005",
+                        "surface-container": "#efeded",
+                        "on-secondary-fixed-variant": "#930015",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fbf9f8",
+                        "on-secondary-container": "#fffbff",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "on-primary-container": "#878ade",
+                        "on-error": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "inverse-primary": "#c0c1ff",
+                        "secondary-fixed": "#ffdad7",
+                        "outline": "#777682",
+                        "on-surface-variant": "#464651",
+                        "tertiary-fixed": "#e1e2ee",
+                        "surface-dim": "#dbd9d9",
+                        "error": "#ba1a1a",
+                        "tertiary": "#13161e",
+                        "secondary": "#bb001e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "64px",
+                        "stack-md": "24px",
+                        "gutter-grid": "24px",
+                        "stack-sm": "8px",
+                        "section-padding": "80px",
+                        "margin-page": "5vw"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Manrope',sans-serif;}
-  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;display:inline-block;vertical-align:middle;}
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-  /* Diagonal button accent */
-  .btn-diag{position:relative;padding-right:50px;overflow:hidden;}
-  .btn-diag::after{content:"north_east";font-family:'Material Symbols Outlined';position:absolute;right:0;top:0;bottom:0;width:42px;background:#D42027;display:flex;align-items:center;justify-content:center;color:white;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);}
+        .diagonal-accent {
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
 
-  /* Half-cut decorative corners */
-  .cut-tr{clip-path:polygon(0 0,100% 0,100% 100%,0 0);}
-  .cut-bl{clip-path:polygon(0 0,100% 100%,0 100%);}
-  .cut-br{clip-path:polygon(100% 0,100% 100%,0 100%);}
+        .btn-diagonal {
+            position: relative;
+            padding-right: 48px;
+            overflow: hidden;
+        }
 
-  /* Card bottom-left color tag */
-  .card-tag{clip-path:polygon(0 0,90% 0,100% 100%,0 100%);}
+        .btn-diagonal::after {
+            content: "north_east";
+            font-family: 'Material Symbols Outlined';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            background: #bb001e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+        }
 
-  /* Hero diagonal bottom edge */
-  .hero-cut{clip-path:polygon(0 0,100% 0,100% 92%,0 100%);}
+        .card-tag {
+            background: #F2F3FF;
+            color: #04005c;
+            padding: 4px 12px;
+            display: inline-block;
+        }
 
-  /* Sidebar chapter hover */
-  .chap-item{position:relative;transition:all .2s;}
-  .chap-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:#E86400;transition:width .2s;}
-  .chap-item:hover::before{width:4px;}
-  .chap-item:hover{padding-left:8px;background:rgba(232,100,0,.12);}
-  .chap-item.active{border-left:4px solid #E86400;background:rgba(232,100,0,.15);}
+        .bg-slope {
+            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+        }
 
-  /* Video overlay */
-  .vid-wrap{position:relative;overflow:hidden;}
-  .vid-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,18,87,.85) 0%,transparent 55%);}
-  .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;width:52px;height:52px;background:rgba(232,100,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;}
-  .vid-wrap:hover .play-btn{transform:translate(-50%,-50%) scale(1.1);background:#E86400;}
-
-  /* Stats left border */
-  .stat-bar{border-left:4px solid #E86400;}
-
-  /* Orange slash badge */
-  .slash-badge{clip-path:polygon(8% 0,100% 0,92% 100%,0 100%);padding:4px 20px;}
-
-  /* CTA diagonal strips */
-  .cta-strip-l{position:absolute;top:0;left:0;width:180px;height:100%;background:rgba(13,18,87,.18);clip-path:polygon(0 0,70% 0,100% 100%,0 100%);pointer-events:none;}
-  .cta-strip-r{position:absolute;top:0;right:0;width:180px;height:100%;background:rgba(13,18,87,.18);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);pointer-events:none;}
-
-  /* Lift on hover */
-  .lift{transition:transform .3s,box-shadow .3s;}
-  .lift:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(13,18,87,.13);}
-
-  /* Orange underline grow */
-  .ou-line{position:relative;}
-  .ou-line::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:#E86400;transition:width .3s;}
-  .ou-line:hover::after{width:100%;}
-
-  ::-webkit-scrollbar{width:5px;}
-  ::-webkit-scrollbar-track{background:#F4F3FF;}
-  ::-webkit-scrollbar-thumb{background:#E86400;border-radius:3px;}
-</style>
+        .side-nav-active-clip {
+            clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+        }
+    </style>
 </head>
-<body class="bg-background text-on-surface">
-
-<!-- ═══════════════════════ TOP INFO BAR ═══════════════════════ -->
-<div style="background:#0D1257;" class="py-2 px-[5vw] hidden md:block">
-  <div class="max-w-[1440px] mx-auto flex justify-between items-center">
-    <div class="flex items-center gap-6 text-white text-xs" style="opacity:.7;">
-      <a href="tel:+919717937000" class="flex items-center gap-1 hover:text-[#E86400] transition-colors">
-        <span class="material-symbols-outlined" style="font-size:14px;">phone</span>+91 9717937000
-      </a>
-      <a href="mailto:info@piocci.org" class="flex items-center gap-1 hover:text-[#E86400] transition-colors">
-        <span class="material-symbols-outlined" style="font-size:14px;">mail</span>info@piocci.org
-      </a>
-    </div>
-    <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.5);">
-      <a href="#" class="hover:text-[#E86400] transition-colors">PBD 2025</a>
-      <span style="opacity:.3;">|</span>
-      <a href="#" class="hover:text-[#E86400] transition-colors">Membership</a>
-      <span style="opacity:.3;">|</span>
-      <a href="#" class="hover:text-[#E86400] transition-colors">Privacy Policy</a>
-    </div>
-  </div>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-white">
+<!-- Top Navigation Anchor (As per JSON) -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant/30 dark:border-outline-variant/10 docked full-width top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-page py-6 max-w-[1440px] mx-auto">
+<div class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed uppercase tracking-tight">
+                Global Commerce Chamber
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-secondary font-bold pb-1 transition-colors duration-200" href="#">Initiatives</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Briefings</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Network</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Membership</a>
 </div>
-
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
-<header id="mainhead" class="bg-white border-b border-gray-100 sticky top-0 z-50 transition-shadow duration-300">
-  <div class="max-w-[1440px] mx-auto px-[5vw] py-3 flex justify-between items-center gap-6">
-
-    <!-- PIOCCI Logo -->
-    <div class="flex items-center gap-3 flex-shrink-0">
-      <!-- SVG Logo -->
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 flex-shrink-0">
-        <!-- Flame base -->
-        <ellipse cx="50" cy="76" rx="7" ry="13" fill="#E86400" opacity=".9"/>
-        <!-- Petals / people in a ring -->
-        <!-- Top green -->
-        <ellipse cx="50" cy="18" rx="5.5" ry="9" fill="#138808" opacity=".9"/>
-        <circle cx="50" cy="10" r="4.5" fill="#138808" opacity=".9"/>
-        <!-- Top-right orange -->
-        <g transform="rotate(45,74,25)">
-          <ellipse cx="74" cy="25" rx="5.5" ry="9" fill="#E86400" opacity=".9"/>
-          <circle cx="74" cy="17" r="4.5" fill="#E86400" opacity=".9"/>
-        </g>
-        <!-- Right red -->
-        <g transform="rotate(90,80,50)">
-          <ellipse cx="80" cy="50" rx="5.5" ry="9" fill="#D42027" opacity=".9"/>
-          <circle cx="80" cy="42" r="4.5" fill="#D42027" opacity=".9"/>
-        </g>
-        <!-- Bottom-right yellow -->
-        <g transform="rotate(135,74,74)">
-          <ellipse cx="74" cy="74" rx="5.5" ry="9" fill="#FFC107" opacity=".9"/>
-          <circle cx="74" cy="66" r="4.5" fill="#FFC107" opacity=".9"/>
-        </g>
-        <!-- Bottom-left blue -->
-        <g transform="rotate(-135,26,74)">
-          <ellipse cx="26" cy="74" rx="5.5" ry="9" fill="#1565C0" opacity=".9"/>
-          <circle cx="26" cy="66" r="4.5" fill="#1565C0" opacity=".9"/>
-        </g>
-        <!-- Left purple -->
-        <g transform="rotate(-90,20,50)">
-          <ellipse cx="20" cy="50" rx="5.5" ry="9" fill="#7B1FA2" opacity=".9"/>
-          <circle cx="20" cy="42" r="4.5" fill="#7B1FA2" opacity=".9"/>
-        </g>
-        <!-- Top-left dark-green -->
-        <g transform="rotate(-45,26,25)">
-          <ellipse cx="26" cy="25" rx="5.5" ry="9" fill="#2E7D32" opacity=".9"/>
-          <circle cx="26" cy="17" r="4.5" fill="#2E7D32" opacity=".9"/>
-        </g>
-        <!-- Center sun -->
-        <circle cx="50" cy="50" r="11" fill="#FF8C00"/>
-        <circle cx="50" cy="50" r="7"  fill="#E86400"/>
-        <circle cx="50" cy="50" r="3"  fill="#FFF"/>
-      </svg>
-      <!-- Org Name -->
-      <div>
-        <div style="color:#0D1257;font-size:15px;font-weight:800;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;">People of Indian Origin</div>
-        <div style="color:#E86400;font-size:11px;font-weight:700;line-height:1.3;text-transform:uppercase;letter-spacing:.08em;">Chamber of Commerce and Industry</div>
-        <div style="color:#8888AA;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">Global Business Networking Platform for Indian Diaspora</div>
-      </div>
-    </div>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-1">
-      <a href="#" style="color:#0D1257;border-bottom:2px solid #E86400;" class="px-3 py-2 text-xs font-bold uppercase tracking-wider">Home</a>
-      <a href="#" class="ou-line px-3 py-2 text-xs font-bold text-on-surface-variant hover:text-[#E86400] transition-colors uppercase tracking-wider">About Us</a>
-      <a href="#" class="ou-line px-3 py-2 text-xs font-bold text-on-surface-variant hover:text-[#E86400] transition-colors uppercase tracking-wider">Events</a>
-      <a href="#" class="ou-line px-3 py-2 text-xs font-bold text-on-surface-variant hover:text-[#E86400] transition-colors uppercase tracking-wider">Gallery</a>
-      <a href="#" class="ou-line px-3 py-2 text-xs font-bold text-on-surface-variant hover:text-[#E86400] transition-colors uppercase tracking-wider">Membership</a>
-      <a href="#" style="background:#E86400;color:#fff;" class="px-4 py-2 text-xs font-bold uppercase tracking-wider hover:brightness-110 transition-all ml-2">Biennial Convention 2025</a>
-      <a href="#" class="ou-line px-3 py-2 text-xs font-bold text-on-surface-variant hover:text-[#E86400] transition-colors uppercase tracking-wider">Contact Us</a>
-    </nav>
-    <button class="lg:hidden p-2" style="color:#0D1257;">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
-  </div>
-</header>
-
-<!-- ═══════════════════════ LAYOUT WRAPPER ═══════════════════════ -->
-<div class="flex">
-
-  <!-- ══ GLOBAL CHAPTERS SIDEBAR ══ -->
-  <aside class="hidden xl:flex fixed left-0 z-40 flex-col" style="top:113px;width:200px;height:calc(100vh - 113px);background:#0D1257;">
-    <div class="px-5 py-4" style="border-bottom:1px solid rgba(255,255,255,.08);">
-      <span style="color:#E86400;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Global Chapters</span>
-    </div>
-    <nav class="flex-grow overflow-y-auto">
-      <ul>
-        <li class="chap-item"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.75);">Africa <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a></li>
-        <li class="chap-item"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.75);">America <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a></li>
-        <li class="chap-item active"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider text-white">Asia <span class="material-symbols-outlined" style="font-size:14px;color:#E86400;">chevron_right</span></a></li>
-        <li class="chap-item"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.75);">Europe <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a></li>
-        <li class="chap-item"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.75);">Latin America &amp; Caribbean <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a></li>
-        <li class="chap-item"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.75);">Oceania <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a></li>
-        <li class="chap-item"><a href="#" class="flex items-center justify-between px-5 py-3 text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,.75);">South America <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a></li>
-      </ul>
-    </nav>
-    <div class="px-5 py-4" style="border-top:1px solid rgba(255,255,255,.08);">
-      <div style="color:rgba(255,255,255,.35);font-size:10px;">50+ Countries Worldwide</div>
-    </div>
-  </aside>
-
-  <!-- ══ MAIN CONTENT ══ -->
-  <main class="xl:ml-[200px] w-full">
-
-    <!-- ─── HERO ─── -->
-    <section class="hero-cut relative overflow-hidden" style="min-height:580px;background:#0D1257;">
-      <!-- BG image -->
-      <img alt="International Conference of PIO Parliamentarians"
-        class="absolute inset-0 w-full h-full object-cover"
-        style="opacity:.25;"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5Ff-FF0zddPiESjICZ4lcr3bTKCm9jCW3KN25I9-0OlJ8lW-3nmMcfzJqtVWNIxyDuEIQJPbqTtyIWjAP5l6deXclu1U2o-HFa74zaBNpsgfoaP_aiOoXMTwGv7iwQF_2ieD3Ghz_gNlwx_F6LgZ4y0cgD8fcEb4B4bmsQTcjlqMIuzm8DXckFUrnfv1887Z3SVSeJhXAKGvivLBrhJHnisMzwux5RW--YFRCJLjecbEW_z7JgThbX6W5vUxNY1QhDX7kpaLW773"/>
-      <!-- Gradient overlay -->
-      <div class="absolute inset-0" style="background:linear-gradient(105deg,#0D1257 55%,rgba(13,18,87,.6) 100%);"></div>
-      <!-- Orange top stripe -->
-      <div class="absolute top-0 left-0 right-0" style="height:4px;background:#E86400;"></div>
-      <!-- Decorative corner cuts -->
-      <div class="absolute top-0 right-0 cut-tr" style="width:260px;height:260px;background:rgba(232,100,0,.08);"></div>
-      <div class="absolute bottom-0 right-12 cut-br" style="width:140px;height:140px;border:2px solid rgba(232,100,0,.2);background:transparent;"></div>
-
-      <div class="relative z-10 px-[5vw] max-w-[1440px] mx-auto flex flex-col justify-end" style="padding-top:90px;padding-bottom:80px;min-height:580px;">
-        <div class="max-w-2xl">
-          <span style="background:#E86400;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;" class="inline-block mb-5">Biennial Convention 2025</span>
-          <h1 style="font-size:clamp(28px,4vw,52px);font-weight:800;line-height:1.1;color:#fff;" class="mb-4">
-            Global Business Networking<br/>
-            <span style="color:#E86400;">Platform for Indian Diaspora</span>
-          </h1>
-          <p style="color:rgba(255,255,255,.65);font-size:17px;line-height:1.6;" class="mb-8">
-            President of India inaugurates a conference in Delhi co-organised by PIOCCI.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button class="btn-diag" style="background:#0D1257;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 50px 14px 20px;border:1px solid rgba(255,255,255,.2);">JOIN PIOCCI</button>
-            <button style="border:1px solid rgba(255,255,255,.4);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 24px;" class="hover:border-[#E86400] hover:text-[#E86400] transition-colors">KNOW MORE</button>
-          </div>
-        </div>
-        <!-- Slide dots -->
-        <div class="flex gap-2 mt-10" id="slidedots">
-          <div style="width:32px;height:3px;background:#E86400;" class="slide-dot"></div>
-          <div style="width:14px;height:3px;background:rgba(255,255,255,.25);" class="slide-dot"></div>
-          <div style="width:14px;height:3px;background:rgba(255,255,255,.25);" class="slide-dot"></div>
-          <div style="width:14px;height:3px;background:rgba(255,255,255,.25);" class="slide-dot"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── GLOBAL CHAPTERS UPDATES TICKER ─── -->
-    <section style="background:#F9F8FF;border-bottom:1px solid #E8E6F0;">
-      <div class="max-w-[1440px] mx-auto px-[5vw] py-3 flex items-center gap-4">
-        <div class="flex-shrink-0 slash-badge text-white text-xs font-bold uppercase tracking-wider" style="background:#E86400;">
-          Global Chapters Updates
-        </div>
-        <p style="color:#4A4A6A;font-size:13px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
-          <strong style="color:#0D1257;">INDIA</strong> – Minister of State Meenkashi Lekhi at PIOCCI conclave at Bharat Mandapam, Delhi &nbsp;·&nbsp;
-          <strong style="color:#0D1257;">DUBAI</strong> – PIOCCI Conclave at the India Club, Dubai with international and PIOCCI Gulf members &nbsp;·&nbsp;
-          <strong style="color:#0D1257;">CANADA, GERMANY, AUSTRALIA &amp; LONDON</strong> – Meetings of international and local members of PIOCCI
-        </p>
-      </div>
-    </section>
-
-    <!-- ─── RECENT EVENTS ─── -->
-    <section class="px-[5vw] py-[80px] max-w-[1440px] mx-auto">
-      <!-- Section header -->
-      <div class="flex flex-col md:flex-row justify-between items-end mb-[48px]" style="border-bottom:1px solid #E8E6F0;padding-bottom:20px;">
-        <div style="padding-left:56px;position:relative;">
-          <div style="position:absolute;left:0;top:50%;width:44px;height:3px;background:#E86400;transform:translateY(-50%);"></div>
-          <span style="color:#E86400;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px;">Recent Activities</span>
-          <h2 style="font-size:32px;font-weight:800;color:#0D1257;line-height:1.2;">Highlights &amp; Events</h2>
-        </div>
-        <a href="#" style="color:#E86400;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #E86400;padding-bottom:2px;" class="mt-4 md:mt-0">VIEW ALL EVENTS</a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <!-- Card 1 -->
-        <div class="group lift" style="border:1px solid #E8E6F0;background:#fff;cursor:pointer;">
-          <div class="relative overflow-hidden" style="height:210px;">
-            <img alt="Event in Dubai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmTLoxyw9G3EOISvvWAEneGkvflkIXRmfAAA3lbNrQVzePS6jts1Npm5QpBg3R16vOeBeMmN46qq0lnZLRK5jSLQMkJkFLHF9Q3n6ApeU_wNZZoYRgeLhQX1HoV4BgTQ15FhOFgwgmG9SdXpoAru7UzNtZxPiRiZJgTtnDTK_RZyGSUxgbXo97SPo99XlCM73N9iuIE5Y-5LiQFV6jdKztYUlk81hRLI5qwEgb-6zqVZDnwcqWZqRVubLOHyIwQEp72pQgnXYo1Wqz"/>
-            <div class="card-tag absolute bottom-0 left-0 text-white text-xs font-bold uppercase" style="background:#E86400;padding:5px 22px 5px 12px;">DUBAI</div>
-          </div>
-          <div style="padding:20px 20px 16px;">
-            <div style="color:#8888AA;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">25th June 2019</div>
-            <h3 style="font-size:17px;font-weight:700;color:#0D1257;line-height:1.3;" class="group-hover:text-[#E86400] transition-colors">Event in Dubai</h3>
-            <p style="color:#4A4A6A;font-size:13px;line-height:1.6;margin-top:8px;">PIOCCI Gulf Chapter event connecting Indian diaspora business leaders.</p>
-          </div>
-          <div style="height:3px;background:#E86400;transform:scaleX(0);transform-origin:left;transition:transform .3s;" class="group-hover:scale-x-100"></div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="group lift" style="border:1px solid #E8E6F0;background:#fff;cursor:pointer;">
-          <div class="relative overflow-hidden" style="height:210px;">
-            <img alt="Himachal Pradesh CM meets PIOCCI Gulf Chapter in Dubai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0DQ4GndedysWYrgNDeV4v6ZKgTRiiixX8x3xd1NuGkRoNj2-7ruA5KxQBBF1uJ1q6f-LdMognnl1ZpydgmvTAdu6s9QEuXY14Wnbz46n0actE-iNjpMXoEAedHLw-pUK84pMEWLP1Vr2EDVMUoQQKmBiMu3kEfKCqmV7O_pmvBBVbzpa04yGmKs7D_qLhx0KlNIMU0SyPTffY71B1GpnnO-ihYp5dmniNOLfJZTmF_eCx0Xbn03acNAQmqz6-KIESVulGwV8AqZY"/>
-            <div class="card-tag absolute bottom-0 left-0 text-white text-xs font-bold uppercase" style="background:#0D1257;padding:5px 22px 5px 12px;">GULF</div>
-          </div>
-          <div style="padding:20px 20px 16px;">
-            <div style="color:#8888AA;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Diplomacy</div>
-            <h3 style="font-size:17px;font-weight:700;color:#0D1257;line-height:1.3;" class="group-hover:text-[#E86400] transition-colors">Himachal Pradesh CM meets PIOCCI Gulf Chapter in Dubai</h3>
-            <p style="color:#4A4A6A;font-size:13px;line-height:1.6;margin-top:8px;">Strengthening India-UAE bilateral ties through diaspora engagement.</p>
-          </div>
-          <div style="height:3px;background:#E86400;transform:scaleX(0);transform-origin:left;transition:transform .3s;" class="group-hover:scale-x-100"></div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="group lift" style="border:1px solid #E8E6F0;background:#fff;cursor:pointer;">
-          <div class="relative overflow-hidden" style="height:210px;">
-            <img alt="ARSP and PIOCCI with Mahatma Gandhi Institute" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kZkThuCU6IW2tsl_QZ45jlSjViueM1ptL3QXw0fJBEBACHFGcoIW4vsqztbBiC1wBuKgHiLet9w2GHs1oV8SUVBC4V3q_VAxqTq83BFX-b150NPEcOVIy13pyA2FZhGWU3wvLT4BvZkTK08R4SWYft0Jv-ykAXJ9TDyLCFHWn5aqI730sfwoxU83OoJ4Qiz4kP2TE71fB8b33rBNUqvQtcBVDD93KD4xJi_QmgQdVkfYSVKcxOV5p5DprbGCXsYBfwKoAxwtvDK8"/>
-            <div class="card-tag absolute bottom-0 left-0 text-white text-xs font-bold uppercase" style="background:#D42027;padding:5px 22px 5px 12px;">PARTNERSHIP</div>
-          </div>
-          <div style="padding:20px 20px 16px;">
-            <div style="color:#8888AA;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Collaboration</div>
-            <h3 style="font-size:17px;font-weight:700;color:#0D1257;line-height:1.3;" class="group-hover:text-[#E86400] transition-colors">ARSP &amp; PIOCCI in Association with Mahatma Gandhi Institute &amp; Pravasi Ghat Trust</h3>
-            <p style="color:#4A4A6A;font-size:13px;line-height:1.6;margin-top:8px;">Fostering cultural and business ties with the Indian diaspora worldwide.</p>
-          </div>
-          <div style="height:3px;background:#E86400;transform:scaleX(0);transform-origin:left;transition:transform .3s;" class="group-hover:scale-x-100"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ─── FEATURED VIDEOS ─── -->
-    <section style="background:#0D1257;padding:80px 0;">
-      <div class="px-[5vw] max-w-[1440px] mx-auto">
-        <div class="flex justify-between items-end mb-12">
-          <div>
-            <span style="color:#E86400;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px;">Biennial Convention 2025</span>
-            <h2 style="font-size:32px;font-weight:800;color:#fff;line-height:1.2;">Featured Videos</h2>
-          </div>
-          <a href="#" style="color:#E86400;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #E86400;padding-bottom:2px;">VIEW ALL</a>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-          <!-- Vid 1 -->
-          <div class="vid-wrap group cursor-pointer">
-            <div style="height:170px;position:relative;overflow:hidden;">
-              <img alt="Session 1 Investing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="opacity:.7;"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5Ff-FF0zddPiESjICZ4lcr3bTKCm9jCW3KN25I9-0OlJ8lW-3nmMcfzJqtVWNIxyDuEIQJPbqTtyIWjAP5l6deXclu1U2o-HFa74zaBNpsgfoaP_aiOoXMTwGv7iwQF_2ieD3Ghz_gNlwx_F6LgZ4y0cgD8fcEb4B4bmsQTcjlqMIuzm8DXckFUrnfv1887Z3SVSeJhXAKGvivLBrhJHnisMzwux5RW--YFRCJLjecbEW_z7JgThbX6W5vUxNY1QhDX7kpaLW773"/>
-              <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(13,18,87,.9) 0%,transparent 55%);z-index:1;"></div>
-              <div class="play-btn"><span class="material-symbols-outlined text-white" style="margin-left:4px;">play_arrow</span></div>
-              <div class="absolute bottom-3 left-3 z-10"><span style="color:#E86400;font-size:10px;font-weight:700;text-transform:uppercase;">PIOCCI India</span></div>
-            </div>
-            <div style="background:#1B2580;padding:14px;border-top:2px solid rgba(232,100,0,.4);">
-              <p style="color:#fff;font-size:12px;font-weight:500;line-height:1.5;">SESSION 1: Investing in a Transformed India – PIOCCI Biennial Convention</p>
-            </div>
-          </div>
-
-          <!-- Vid 2 -->
-          <div class="vid-wrap group cursor-pointer">
-            <div style="height:170px;position:relative;overflow:hidden;">
-              <img alt="Session 2 Tourism" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="opacity:.7;"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmTLoxyw9G3EOISvvWAEneGkvflkIXRmfAAA3lbNrQVzePS6jts1Npm5QpBg3R16vOeBeMmN46qq0lnZLRK5jSLQMkJkFLHF9Q3n6ApeU_wNZZoYRgeLhQX1HoV4BgTQ15FhOFgwgmG9SdXpoAru7UzNtZxPiRiZJgTtnDTK_RZyGSUxgbXo97SPo99XlCM73N9iuIE5Y-5LiQFV6jdKztYUlk81hRLI5qwEgb-6zqVZDnwcqWZqRVubLOHyIwQEp72pQgnXYo1Wqz"/>
-              <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(13,18,87,.9) 0%,transparent 55%);z-index:1;"></div>
-              <div class="play-btn"><span class="material-symbols-outlined text-white" style="margin-left:4px;">play_arrow</span></div>
-              <div class="absolute bottom-3 left-3 z-10"><span style="color:#E86400;font-size:10px;font-weight:700;text-transform:uppercase;">PIOCCI India</span></div>
-            </div>
-            <div style="background:#1B2580;padding:14px;border-top:2px solid rgba(232,100,0,.4);">
-              <p style="color:#fff;font-size:12px;font-weight:500;line-height:1.5;">Session 2: Boundless Opportunities for Tourism in India – PIOCCI Biennial</p>
-            </div>
-          </div>
-
-          <!-- Vid 3 -->
-          <div class="vid-wrap group cursor-pointer">
-            <div style="height:170px;position:relative;overflow:hidden;">
-              <img alt="Session 3 Energy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="opacity:.7;"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0DQ4GndedysWYrgNDeV4v6ZKgTRiiixX8x3xd1NuGkRoNj2-7ruA5KxQBBF1uJ1q6f-LdMognnl1ZpydgmvTAdu6s9QEuXY14Wnbz46n0actE-iNjpMXoEAedHLw-pUK84pMEWLP1Vr2EDVMUoQQKmBiMu3kEfKCqmV7O_pmvBBVbzpa04yGmKs7D_qLhx0KlNIMU0SyPTffY71B1GpnnO-ihYp5dmniNOLfJZTmF_eCx0Xbn03acNAQmqz6-KIESVulGwV8AqZY"/>
-              <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(13,18,87,.9) 0%,transparent 55%);z-index:1;"></div>
-              <div class="play-btn"><span class="material-symbols-outlined text-white" style="margin-left:4px;">play_arrow</span></div>
-              <div class="absolute bottom-3 left-3 z-10"><span style="color:#E86400;font-size:10px;font-weight:700;text-transform:uppercase;">PIOCCI India</span></div>
-            </div>
-            <div style="background:#1B2580;padding:14px;border-top:2px solid rgba(232,100,0,.4);">
-              <p style="color:#fff;font-size:12px;font-weight:500;line-height:1.5;">Session 3: Sufficient &amp; Surplus Sustainable Energy in India – PIOCCI</p>
-            </div>
-          </div>
-
-          <!-- Vid 4 -->
-          <div class="vid-wrap group cursor-pointer">
-            <div style="height:170px;position:relative;overflow:hidden;">
-              <img alt="BPCL Corporate Video" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="opacity:.7;"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kZkThuCU6IW2tsl_QZ45jlSjViueM1ptL3QXw0fJBEBACHFGcoIW4vsqztbBiC1wBuKgHiLet9w2GHs1oV8SUVBC4V3q_VAxqTq83BFX-b150NPEcOVIy13pyA2FZhGWU3wvLT4BvZkTK08R4SWYft0Jv-ykAXJ9TDyLCFHWn5aqI730sfwoxU83OoJ4Qiz4kP2TE71fB8b33rBNUqvQtcBVDD93KD4xJi_QmgQdVkfYSVKcxOV5p5DprbGCXsYBfwKoAxwtvDK8"/>
-              <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(13,18,87,.9) 0%,transparent 55%);z-index:1;"></div>
-              <div class="play-btn"><span class="material-symbols-outlined text-white" style="margin-left:4px;">play_arrow</span></div>
-              <div class="absolute bottom-3 left-3 z-10"><span style="color:#E86400;font-size:10px;font-weight:700;text-transform:uppercase;">PIOCCI India</span></div>
-            </div>
-            <div style="background:#1B2580;padding:14px;border-top:2px solid rgba(232,100,0,.4);">
-              <p style="color:#fff;font-size:12px;font-weight:500;line-height:1.5;">BPCL Corporate Video at India Soft</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── ABOUT + WHY US ─── -->
-    <section>
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-
-        <!-- About PIOCCI -->
-        <div style="background:#F9F8FF;padding:72px 5vw;position:relative;overflow:hidden;">
-          <!-- Decorative corner cut (half-cut top-right) -->
-          <div class="cut-tr absolute top-0 right-0" style="width:100px;height:100px;background:rgba(232,100,0,.08);"></div>
-          <div class="cut-tr absolute top-0 right-0" style="width:52px;height:52px;background:rgba(232,100,0,.14);"></div>
-          <div style="border-left:4px solid #E86400;padding-left:20px;margin-bottom:32px;">
-            <span style="color:#E86400;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px;">Who We Are</span>
-            <h2 style="font-size:30px;font-weight:800;color:#0D1257;line-height:1.2;">About PIOCCI</h2>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:14px;color:#4A4A6A;font-size:14px;line-height:1.7;">
-            <p>People of Indian Origin Chamber of Commerce and Industry (PIOCCI) fosters collaboration and networking opportunities among people of Indian origin and businesses. With a diverse membership base, including entrepreneurs, industry leaders, and professionals from various sectors, PIOCCI strives to enhance trade relations, facilitate investments, advocate and influence policies.</p>
-            <p>Our professionals connect you with potential business partners, generate leads, and provide customised professional services. PIOCCI helps you grow your network, find new clients, and navigate the global market.</p>
-            <p>PIOCCI was registered as a national society in India on October 6, 2003. We have a full-time secretariat in Delhi that oversees all activities in India. PIOCCI International delivers services worldwide through registered entities in select geographies and directly in countries where PIOCCI does not have entities.</p>
-            <p>We have spawned chapters such as PIOCCI USA, PIOCCI Canada, and PIOCCI Limited in Dubai, registered in respective geographies. Each organisation has its team that serves the region.</p>
-          </div>
-          <!-- Stats -->
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;">
-            <div class="stat-bar" style="padding-left:14px;">
-              <div style="font-size:26px;font-weight:800;color:#0D1257;">50+</div>
-              <div style="font-size:10px;color:#8888AA;text-transform:uppercase;letter-spacing:.08em;">Countries</div>
-            </div>
-            <div class="stat-bar" style="padding-left:14px;">
-              <div style="font-size:26px;font-weight:800;color:#0D1257;">2003</div>
-              <div style="font-size:10px;color:#8888AA;text-transform:uppercase;letter-spacing:.08em;">Established</div>
-            </div>
-            <div class="stat-bar" style="padding-left:14px;">
-              <div style="font-size:26px;font-weight:800;color:#0D1257;">All</div>
-              <div style="font-size:10px;color:#8888AA;text-transform:uppercase;letter-spacing:.08em;">Indian States</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Why Us -->
-        <div style="background:#0D1257;padding:72px 5vw;position:relative;overflow:hidden;">
-          <!-- Decorative corner cut (half-cut bottom-left) -->
-          <div class="cut-bl absolute bottom-0 left-0" style="width:120px;height:120px;background:rgba(232,100,0,.1);"></div>
-          <div class="cut-bl absolute bottom-0 left-0" style="width:60px;height:60px;background:rgba(232,100,0,.18);"></div>
-          <div style="border-left:4px solid #E86400;padding-left:20px;margin-bottom:32px;">
-            <span style="color:#E86400;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px;">Our Distinction</span>
-            <h2 style="font-size:30px;font-weight:800;color:#fff;line-height:1.2;">Why Us?</h2>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:14px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.7;">
-            <p>Indian diaspora has many organizations in all parts of the world. However, these associations are primarily local or national. They do not have a footprint in India or other regions of the world. PIOCCI seeks to bridge that gap.</p>
-            <p>We are a Global Business Platform for Indian Diaspora and have a presence and activities in more than 50 countries spanning all parts of the globe. And we also have chapters in all Indian states.</p>
-            <p>Therefore, we are a bridge for the Indian diaspora to do business in India and worldwide. We collaborate and complement diaspora organisations, bilateral, and other business chambers.</p>
-          </div>
-          <!-- Logo watermark -->
-          <div style="margin-top:36px;display:flex;justify-content:center;opacity:.45;">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:110px;">
-              <ellipse cx="50" cy="76" rx="7" ry="13" fill="#E86400"/>
-              <ellipse cx="50" cy="18" rx="5" ry="8" fill="#138808"/>
-              <circle cx="50" cy="10" r="4" fill="#138808"/>
-              <g transform="rotate(45,74,25)"><ellipse cx="74" cy="25" rx="5" ry="8" fill="#E86400"/><circle cx="74" cy="17" r="4" fill="#E86400"/></g>
-              <g transform="rotate(90,80,50)"><ellipse cx="80" cy="50" rx="5" ry="8" fill="#D42027"/><circle cx="80" cy="42" r="4" fill="#D42027"/></g>
-              <g transform="rotate(135,74,74)"><ellipse cx="74" cy="74" rx="5" ry="8" fill="#FFC107"/><circle cx="74" cy="66" r="4" fill="#FFC107"/></g>
-              <g transform="rotate(-135,26,74)"><ellipse cx="26" cy="74" rx="5" ry="8" fill="#1565C0"/><circle cx="26" cy="66" r="4" fill="#1565C0"/></g>
-              <g transform="rotate(-90,20,50)"><ellipse cx="20" cy="50" rx="5" ry="8" fill="#7B1FA2"/><circle cx="20" cy="42" r="4" fill="#7B1FA2"/></g>
-              <g transform="rotate(-45,26,25)"><ellipse cx="26" cy="25" rx="5" ry="8" fill="#2E7D32"/><circle cx="26" cy="17" r="4" fill="#2E7D32"/></g>
-              <circle cx="50" cy="50" r="11" fill="#FF8C00"/>
-              <circle cx="50" cy="50" r="7"  fill="#E86400"/>
-              <circle cx="50" cy="50" r="3"  fill="#fff"/>
-            </svg>
-          </div>
-          <div style="margin-top:24px;border-left:2px solid #E86400;padding-left:16px;">
-            <p style="color:rgba(255,255,255,.5);font-size:13px;font-style:italic;">"A bridge for the Indian diaspora to do business in India and worldwide."</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ─── JOIN PIOCCI CTA ─── -->
-    <section style="background:#E86400;padding:64px 5vw;position:relative;overflow:hidden;">
-      <div class="cta-strip-l"></div>
-      <div class="cta-strip-r"></div>
-      <div style="max-width:1440px;margin:0 auto;text-align:center;position:relative;z-index:1;">
-        <h2 style="font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:12px;">Join PIOCCI</h2>
-        <p style="color:rgba(255,255,255,.8);font-size:15px;margin-bottom:36px;">Be part of the world's leading platform for Indian diaspora business networking.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
-          <button style="background:#fff;color:#E86400;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:16px 36px;transition:all .2s;" class="hover:bg-[#0D1257] hover:text-white">
-            BECOME OUR INTERNATIONAL PARTNER
-          </button>
-          <button style="border:2px solid #fff;color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:16px 36px;transition:all .2s;" class="hover:bg-white hover:text-[#E86400]">
-            BECOME OUR INDIA MEMBER
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── INDIA GATE ILLUSTRATION ─── -->
-    <section style="background:#F9F8FF;height:260px;position:relative;overflow:hidden;">
-      <svg viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg"
-           style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:1100px;opacity:.12;">
-        <!-- Ground -->
-        <rect x="0" y="245" width="1000" height="15" fill="#0D1257"/>
-        <!-- Roads -->
-        <rect x="0" y="238" width="360" height="10" fill="#0D1257" opacity=".4"/>
-        <rect x="640" y="238" width="360" height="10" fill="#0D1257" opacity=".4"/>
-        <!-- Main arch body -->
-        <rect x="420" y="80" width="160" height="162" fill="#0D1257"/>
-        <!-- Arch opening -->
-        <rect x="455" y="125" width="90" height="117" fill="#F9F8FF"/>
-        <!-- Arch top curve -->
-        <ellipse cx="500" cy="125" rx="45" ry="35" fill="#F9F8FF"/>
-        <ellipse cx="500" cy="125" rx="45" ry="35" fill="none" stroke="#0D1257" stroke-width="3"/>
-        <!-- Cornice -->
-        <rect x="390" y="58" width="220" height="28" fill="#0D1257"/>
-        <rect x="370" y="46" width="260" height="16" fill="#0D1257"/>
-        <!-- INDIA label -->
-        <text x="500" y="72" text-anchor="middle" fill="#F9F8FF" font-size="13" font-weight="700" letter-spacing="4" font-family="Manrope,sans-serif">INDIA</text>
-        <!-- Left inner pillars -->
-        <rect x="315" y="130" width="32" height="113" fill="#0D1257"/>
-        <rect x="304" y="118" width="54" height="16" fill="#0D1257"/>
-        <!-- Right inner pillars -->
-        <rect x="653" y="130" width="32" height="113" fill="#0D1257"/>
-        <rect x="642" y="118" width="54" height="16" fill="#0D1257"/>
-        <!-- Outer lamp posts L -->
-        <rect x="178" y="162" width="10" height="82" fill="#0D1257" opacity=".55"/>
-        <circle cx="183" cy="160" r="7" fill="#0D1257" opacity=".55"/>
-        <!-- Outer lamp posts R -->
-        <rect x="812" y="162" width="10" height="82" fill="#0D1257" opacity=".55"/>
-        <circle cx="817" cy="160" r="7" fill="#0D1257" opacity=".55"/>
-        <!-- Far lamp posts -->
-        <rect x="75" y="175" width="7" height="70" fill="#0D1257" opacity=".4"/>
-        <circle cx="78" cy="174" r="5" fill="#0D1257" opacity=".4"/>
-        <rect x="918" y="175" width="7" height="70" fill="#0D1257" opacity=".4"/>
-        <circle cx="921" cy="174" r="5" fill="#0D1257" opacity=".4"/>
-        <!-- Ground flora lines -->
-        <path d="M0 240 Q120 200 240 230 Q360 205 420 238" stroke="#0D1257" stroke-width="1" fill="none" opacity=".2"/>
-        <path d="M580 238 Q640 205 760 230 Q880 200 1000 240" stroke="#0D1257" stroke-width="1" fill="none" opacity=".2"/>
-      </svg>
-    </section>
-
-    <!-- ─── FOOTER ─── -->
-    <footer style="background:#0D1257;color:#fff;padding:72px 5vw 32px;">
-      <!-- Orange top accent -->
-      <div style="height:3px;background:#E86400;margin-bottom:56px;margin-top:-16px;"></div>
-      <div class="max-w-[1440px] mx-auto">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;margin-bottom:48px;">
-
-          <!-- About col -->
-          <div>
-            <!-- Mini logo -->
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-              <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;flex-shrink:0;">
-                <circle cx="25" cy="25" r="24" fill="rgba(232,100,0,.12)"/>
-                <circle cx="25" cy="25" r="6" fill="#E86400"/>
-                <circle cx="25" cy="25" r="3" fill="#fff"/>
-              </svg>
-              <div>
-                <div style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;line-height:1.3;">People of Indian Origin</div>
-                <div style="font-size:9px;color:#E86400;letter-spacing:.06em;text-transform:uppercase;">Chamber of Commerce &amp; Industry</div>
-              </div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:10px;color:rgba(255,255,255,.5);font-size:13px;">
-              <div style="display:flex;gap:8px;align-items:flex-start;">
-                <span class="material-symbols-outlined" style="font-size:15px;color:#E86400;margin-top:1px;">location_on</span>
-                <span>PIOCCI, 27 &amp; 28, Lobby Hotel Ashok, 50-B, Niti Marg, Diplomatic Enclave, Chanakyapuri, New Delhi-110021</span>
-              </div>
-              <div style="display:flex;gap:8px;align-items:center;">
-                <span class="material-symbols-outlined" style="font-size:15px;color:#E86400;">mail</span>
-                <a href="mailto:info@piocci.org" style="color:rgba(255,255,255,.5);" class="hover:text-[#E86400] transition-colors">info@piocci.org</a>
-              </div>
-              <div style="display:flex;gap:8px;align-items:center;">
-                <span class="material-symbols-outlined" style="font-size:15px;color:#E86400;">phone</span>
-                <span>+91-97179 53000</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h4 style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E86400;margin-bottom:20px;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-block;width:28px;height:2px;background:#E86400;"></span>Quick Links
-            </h4>
-            <ul style="display:flex;flex-direction:column;gap:10px;">
-              <li><a href="#" style="color:rgba(255,255,255,.55);font-size:13px;display:flex;align-items:center;gap:6px;" class="hover:text-[#E86400] transition-colors"><span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>PBD 2025</a></li>
-              <li><a href="#" style="color:rgba(255,255,255,.55);font-size:13px;display:flex;align-items:center;gap:6px;" class="hover:text-[#E86400] transition-colors"><span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>Membership</a></li>
-              <li><a href="#" style="color:rgba(255,255,255,.55);font-size:13px;display:flex;align-items:center;gap:6px;" class="hover:text-[#E86400] transition-colors"><span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>Privacy Policy</a></li>
-              <li><a href="#" style="color:rgba(255,255,255,.55);font-size:13px;display:flex;align-items:center;gap:6px;" class="hover:text-[#E86400] transition-colors"><span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>Terms and Conditions</a></li>
-            </ul>
-          </div>
-
-          <!-- Stay Connected -->
-          <div>
-            <h4 style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E86400;margin-bottom:20px;display:flex;align-items:center;gap:8px;">
-              <span style="display:inline-block;width:28px;height:2px;background:#E86400;"></span>Stay Connected
-            </h4>
-            <div style="display:flex;gap:10px;margin-bottom:20px;">
-              <a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .2s;" class="hover:bg-[#E86400]">
-                <svg style="width:14px;height:14px;fill:#fff;" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .2s;" class="hover:bg-[#E86400]">
-                <svg style="width:14px;height:14px;fill:#fff;" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-              </a>
-              <a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .2s;" class="hover:bg-[#E86400]">
-                <svg style="width:14px;height:14px;fill:#fff;" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0D1257"/></svg>
-              </a>
-              <a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .2s;" class="hover:bg-[#E86400]">
-                <svg style="width:14px;height:14px;fill:#fff;" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-            </div>
-            <!-- Newsletter -->
-            <div style="background:rgba(255,255,255,.05);padding:16px;border:1px solid rgba(255,255,255,.08);">
-              <p style="color:rgba(255,255,255,.4);font-size:11px;margin-bottom:10px;">Subscribe to PIOCCI Newsletter</p>
-              <div style="display:flex;">
-                <input type="email" placeholder="Your email address" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:9px 12px;font-size:12px;flex:1;outline:none;font-family:inherit;" class="placeholder:text-white/30 focus:border-[#E86400]"/>
-                <button style="background:#E86400;color:#fff;font-size:11px;font-weight:700;padding:9px 16px;border:none;cursor:pointer;transition:background .2s;" class="hover:bg-white hover:text-[#E86400]">GO</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Copyright -->
-        <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
-          <span style="color:rgba(255,255,255,.3);font-size:11px;">© Copyright 2018 People of Indian Origin Chamber of Commerce &amp; Industry</span>
-          <div style="display:flex;gap:20px;">
-            <a href="#" style="color:rgba(255,255,255,.3);font-size:11px;" class="hover:text-[#E86400] transition-colors">About</a>
-            <a href="#" style="color:rgba(255,255,255,.3);font-size:11px;" class="hover:text-[#E86400] transition-colors">Contact</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </main>
-</div>
-
-<!-- ─── FLOATING JOIN BUTTON ─── -->
-<button style="position:fixed;bottom:28px;right:28px;background:#E86400;color:#fff;width:52px;height:52px;border-radius:50%;box-shadow:0 8px 24px rgba(232,100,0,.4);display:flex;align-items:center;justify-content:center;z-index:999;border:none;cursor:pointer;transition:transform .2s,background .2s;" class="hover:scale-110 hover:bg-[#0D1257]">
-  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0,'wght' 700;">person_add</span>
+<div class="flex items-center gap-4">
+<button class="p-2 scale-100 hover:scale-[1.02] transition-transform duration-200 text-primary">
+<span class="material-symbols-outlined" data-icon="search">search</span>
 </button>
-
+<button class="p-2 scale-100 hover:scale-[1.02] transition-transform duration-200 text-primary">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<div class="flex">
+<!-- Sidebar Navigation (As per JSON) -->
+<aside class="hidden lg:flex fixed left-0 top-24 h-[calc(100vh-6rem)] w-72 bg-primary dark:bg-primary-container flex-col z-40 transition-all duration-300">
+<div class="p-8 flex flex-col gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">Member Portal</span>
+<span class="font-label-caps text-label-caps text-on-primary/60">Institutional Access</span>
+</div>
+<nav class="flex-grow">
+<ul class="flex flex-col">
+<li class="group">
+<a class="flex items-center gap-4 bg-secondary text-on-secondary py-4 px-6 relative translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-caps text-label-caps">Executive Dashboard</span>
+<div class="absolute right-0 top-0 h-full w-3 bg-surface"></div>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-label-caps text-label-caps">Strategic Roadmap</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-caps text-label-caps">Member Directory</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-label-caps text-label-caps">Economic Insights</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-on-primary/70 py-4 px-6 hover:bg-primary-fixed-dim/10 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-label-caps text-label-caps">Policy Archive</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-6 border-t border-on-primary/10">
+<button class="w-full bg-secondary text-white font-label-caps text-label-caps py-4 px-4 hover:brightness-110 transition-all">
+                    Join Global Network
+                </button>
+</div>
+<div class="p-6 flex gap-6 text-on-primary/50">
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors" data-icon="settings">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors" data-icon="contact_support">contact_support</span>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 w-full">
+<!-- Hero Section -->
+<section class="relative min-h-[600px] flex items-center overflow-hidden">
+<img alt="Corporate Headquarters" class="absolute inset-0 w-full h-full object-cover" data-alt="A professional, low-angle photograph of a towering modern glass skyscraper against a clear blue sky, reflecting the surrounding urban corporate landscape. The lighting is crisp and natural, emphasizing the architectural lines and prestigious institutional atmosphere. The scene evokes high-level corporate commerce and strategic leadership, maintaining a minimalist and airy light-mode aesthetic with deep navy shadows and subtle red highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR5Ff-FF0zddPiESjICZ4lcr3bTKCm9jCW3KN25I9-0OlJ8lW-3nmMcfzJqtVWNIxyDuEIQJPbqTtyIWjAP5l6deXclu1U2o-HFa74zaBNpsgfoaP_aiOoXMTwGv7iwQF_2ieD3Ghz_gNlwx_F6LgZ4y0cgD8fcEb4B4bmsQTcjlqMIuzm8DXckFUrnfv1887Z3SVSeJhXAKGvivLBrhJHnisMzwux5RW--YFRCJLjecbEW_z7JgThbX6W5vUxNY1QhDX7kpaLW773"/>
+<div class="absolute inset-0 bg-primary-container/40"></div>
+<div class="relative z-10 px-margin-page py-section-padding text-white max-w-4xl">
+<span class="bg-secondary text-white font-label-caps text-label-caps px-4 py-2 mb-6 inline-block">Institutional Excellence</span>
+<h1 class="font-headline-xl text-headline-xl mb-8">Global Business Networking: Powering the Future Economy.</h1>
+<button class="bg-primary hover:bg-primary/90 text-white font-label-caps text-label-caps py-5 px-8 btn-diagonal transition-all">
+                        JOIN THE MOVEMENT
+                    </button>
+</div>
+<div class="absolute bottom-0 right-0 w-1/2 h-24 bg-surface" style="clip-path: polygon(100% 0, 100% 100%, 0 100%);"></div>
+</section>
+<!-- Strategic Initiatives: Horizontal Bento Grid -->
+<section class="px-margin-page py-section-padding max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-outline-variant/30 pb-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase block mb-2">Strategic Vision</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Initiatives of the Chamber</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-grid">
+<!-- Corridor Card -->
+<div class="group cursor-pointer">
+<div class="relative h-64 overflow-hidden mb-6">
+<img alt="Trade Corridors" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-contrast professional photograph of business executives in a modern boardroom, engaged in a strategic meeting. The environment is bright and airy with large windows. The color palette features institutional navy blues and clean whites, accented with sharp red geometric details in the background. The mood is collaborative, focused, and high-stakes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmTLoxyw9G3EOISvvWAEneGkvflkIXRmfAAA3lbNrQVzePS6jts1Npm5QpBg3R16vOeBeMmN46qq0lnZLRK5jSLQMkJkFLHF9Q3n6ApeU_wNZZoYRgeLhQX1HoV4BgTQ15FhOFgwgmG9SdXpoAru7UzNtZxPiRiZJgTtnDTK_RZyGSUxgbXo97SPo99XlCM73N9iuIE5Y-5LiQFV6jdKztYUlk81hRLI5qwEgb-6zqVZDnwcqWZqRVubLOHyIwQEp72pQgnXYo1Wqz"/>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">NETWORK</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Trade Corridors &amp; Global Markets</h3>
+<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Opening access to emerging high-growth markets through diplomatic channels.</p>
+</div>
+<!-- Transformation Card -->
+<div class="group cursor-pointer">
+<div class="relative h-64 overflow-hidden mb-6">
+<img alt="Eco-Transformation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, minimalist image representing sustainable energy transformation, featuring a futuristic wind turbine or green energy facility against a soft lavender and white morning sky. The lighting is ethereal and high-key. The composition follows the 'Professional Sophisticate' style with sharp lines and a single red accent indicating progress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0DQ4GndedysWYrgNDeV4v6ZKgTRiiixX8x3xd1NuGkRoNj2-7ruA5KxQBBF1uJ1q6f-LdMognnl1ZpydgmvTAdu6s9QEuXY14Wnbz46n0actE-iNjpMXoEAedHLw-pUK84pMEWLP1Vr2EDVMUoQQKmBiMu3kEfKCqmV7O_pmvBBVbzpa04yGmKs7D_qLhx0KlNIMU0SyPTffY71B1GpnnO-ihYp5dmniNOLfJZTmF_eCx0Xbn03acNAQmqz6-KIESVulGwV8AqZY"/>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">SUSTAINABILITY</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Eco-Transformation Protocols</h3>
+<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Guidance for members transitioning to net-zero institutional standards.</p>
+</div>
+<!-- Defense Card -->
+<div class="group cursor-pointer">
+<div class="relative h-64 overflow-hidden mb-6">
+<img alt="Legislative Defense" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dignified judicial or legislative setting with architectural pillars and a focused, professional atmosphere. The lighting is sophisticated, creating depth with soft shadows. The overall aesthetic is editorial, using whites and slate greys with a prestigious navy blue undertone and sharp red graphic markers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-kZkThuCU6IW2tsl_QZ45jlSjViueM1ptL3QXw0fJBEBACHFGcoIW4vsqztbBiC1wBuKgHiLet9w2GHs1oV8SUVBC4V3q_VAxqTq83BFX-b150NPEcOVIy13pyA2FZhGWU3wvLT4BvZkTK08R4SWYft0Jv-ykAXJ9TDyLCFHWn5aqI730sfwoxU83OoJ4Qiz4kP2TE71fB8b33rBNUqvQtcBVDD93KD4xJi_QmgQdVkfYSVKcxOV5p5DprbGCXsYBfwKoAxwtvDK8"/>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">ADVOCACY</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Legislative Defense &amp; Lobbying</h3>
+<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Protecting private enterprise interests in the 2027 presidential debate.</p>
+</div>
+</div>
+</section>
+<!-- Executive Briefings & Diagonal Side Section -->
+<section class="bg-surface-container-low py-section-padding">
+<div class="px-margin-page max-w-[1440px] mx-auto grid grid-cols-12 gap-gutter-grid">
+<div class="col-span-12 lg:col-span-8">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Executive Briefings</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Intelligence &amp; News</h2>
+<!-- Briefing List -->
+<div class="flex flex-col gap-0">
+<article class="group py-8 border-t border-outline-variant/40 flex justify-between items-center hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary-container">Global Resilience</span>
+<h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">The 2026 Sovereign Debt Outlook for G20 Nations</h4>
+<p class="text-on-surface-variant max-w-2xl">A comprehensive analysis of institutional fiscal policy and the impact on international trade flows.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</article>
+<article class="group py-8 border-t border-outline-variant/40 flex justify-between items-center hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary-container">Digital Sovereignty</span>
+<h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">New Frameworks for European Data Autonomy</h4>
+<p class="text-on-surface-variant max-w-2xl">Legislative updates and strategic imperatives for tech infrastructure investments.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</article>
+<article class="group py-8 border-t border-b border-outline-variant/40 flex justify-between items-center hover:bg-primary-fixed/20 transition-all px-4 -mx-4">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary-container">Market Analysis</span>
+<h4 class="font-headline-md text-headline-md group-hover:text-secondary transition-colors">Transitioning to Hydrogen: Infrastructure Gap Analysis</h4>
+<p class="text-on-surface-variant max-w-2xl">Economic insights into the hydrogen energy sector's maturation and private sector opportunities.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</article>
+</div>
+<button class="mt-stack-md border border-primary text-primary font-label-caps text-label-caps py-4 px-8 btn-diagonal hover:bg-primary hover:text-white transition-all">
+                            VIEW ALL BRIEFINGS
+                        </button>
+</div>
+<!-- Diagonal Sidebar -->
+<div class="col-span-12 lg:col-span-4 bg-primary-container text-white p-12 relative overflow-hidden flex flex-col justify-center">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/20" style="clip-path: polygon(100% 0, 100% 100%, 0 0);"></div>
+<h3 class="font-headline-md text-headline-md mb-6 relative z-10">Follow the Movement</h3>
+<ul class="flex flex-col gap-4 relative z-10">
+<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">Economic Insights <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
+<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">Digital Policy <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
+<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">Labor Laws <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
+<li><a class="font-label-caps text-label-caps hover:text-secondary transition-colors border-b border-white/10 pb-2 flex justify-between items-center" href="#">International Trade <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a></li>
+</ul>
+<div class="mt-stack-lg border-l-4 border-secondary pl-6">
+<p class="font-body-md text-body-md italic text-primary-fixed-dim">"Our strength lies in our collective strategic intelligence and institutional agility."</p>
+<p class="mt-4 font-label-caps text-label-caps uppercase">— Chamber Chairman</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Elite Assemblies (Events) -->
+<section class="px-margin-page py-section-padding max-w-[1440px] mx-auto">
+<div class="flex justify-between items-end mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Elite Assemblies &amp; Summits</h2>
+<a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1" href="#">VIEW CALENDAR</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-grid">
+<!-- Event 1 -->
+<div class="bg-primary flex flex-col md:flex-row h-full overflow-hidden group">
+<div class="md:w-2/5 p-8 flex flex-col justify-between bg-primary-container text-white relative">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary rotate-45"></div>
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-secondary-fixed block mb-2">JUNE 2026</span>
+<span class="font-headline-xl text-headline-xl block">22</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-primary-container">PARIS, FRANCE</span>
+</div>
+<div class="md:w-3/5 p-8 text-white flex flex-col justify-between bg-primary relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4">Strategic Autonomy Summit: Defending the Single Market</h3>
+<p class="font-body-md text-body-md text-on-primary/70 mb-6">A high-level assembly of industry CEOs and policy makers to discuss market integration.</p>
+</div>
+<button class="bg-white text-primary font-label-caps text-label-caps py-4 px-6 self-start btn-diagonal group-hover:bg-secondary group-hover:text-white transition-all after:bg-primary-container group-hover:after:bg-white">
+                                REGISTER NOW
+                            </button>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="bg-surface-container flex flex-col md:flex-row h-full overflow-hidden group">
+<div class="md:w-2/5 p-8 flex flex-col justify-between bg-outline-variant text-primary relative">
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-primary block mb-2">JULY 2026</span>
+<span class="font-headline-xl text-headline-xl block">08</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">BERLIN, GERMANY</span>
+</div>
+<div class="md:w-3/5 p-8 text-primary flex flex-col justify-between bg-white relative overflow-hidden border border-outline-variant">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4">The Green Finance Forum: Mobilizing Institutional Capital</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Exploring the intersection of institutional investment and net-zero infrastructure.</p>
+</div>
+<button class="bg-primary text-white font-label-caps text-label-caps py-4 px-6 self-start btn-diagonal hover:bg-secondary transition-all">
+                                REQUEST ACCESS
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Footer Bar -->
+<section class="bg-secondary py-12 px-margin-page">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="text-white">
+<h3 class="font-headline-md text-headline-md mb-2">Stay on the move.</h3>
+<p class="font-body-md text-body-md opacity-90">Institutional insights delivered directly to your executive suite.</p>
+</div>
+<div class="flex w-full md:w-auto">
+<input class="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:ring-0 focus:border-white p-4 w-full md:w-80" placeholder="Your corporate email" type="email"/>
+<button class="bg-white text-secondary font-label-caps text-label-caps px-8 py-4 hover:bg-primary-container hover:text-white transition-all uppercase font-bold">Subscribe</button>
+</div>
+</div>
+</section>
+<!-- Footer (As per JSON) -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest w-full py-section-padding px-margin-page">
+<div class="w-full flex flex-col md:flex-row justify-between items-start gap-stack-lg max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-6 max-w-sm">
+<div class="font-headline-md text-headline-md text-on-primary dark:text-primary font-bold">Global Commerce Chamber</div>
+<p class="text-surface-variant dark:text-on-surface-variant font-body-md">Empowering global enterprise through collective strategy and institutional excellence.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary" data-icon="share">share</span>
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary" data-icon="rss_feed">rss_feed</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-surface">RESOURCES</span>
+<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Annual Reports</a>
+<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Media Kit</a>
+<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Compliance</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-surface">LEGAL</span>
+<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Protocol</a>
+<a class="text-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-stack-lg pt-stack-md border-t border-outline-variant/20 flex flex-col md:flex-row justify-between text-surface-variant font-label-caps text-label-caps">
+<span>© 2024 Global Commerce Chamber. All Rights Reserved. Institutional Excellence through Collaboration.</span>
+<div class="flex gap-8 mt-4 md:mt-0">
+<span>EST. 1919</span>
+<span>V.2.0.26</span>
+</div>
+</div>
+</footer>
+</main>
+</div>
+<!-- Floating Action Button (As per Rule - Only for Home/Dash) -->
+<button class="fixed bottom-8 right-8 bg-secondary text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-50">
+<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'FILL' 0, 'wght' 700;">add</span>
+</button>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Header shadow on scroll
-  const hd = document.getElementById('mainhead');
-  window.addEventListener('scroll', () => {
-    hd.classList.toggle('shadow-lg', window.scrollY > 20);
-  });
+        // Micro-interactions and atmosphere
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-lg');
+                } else {
+                    header.classList.remove('shadow-lg');
+                }
+            });
 
-  // Fix sidebar top dynamically based on header height
-  const sidebar = document.querySelector('aside');
-  if (sidebar) {
-    const updateSidebar = () => {
-      const topBarH = document.querySelector('[style*="background:#0D1257"]')?.offsetHeight || 0;
-      const headH   = hd?.offsetHeight || 0;
-      const total   = topBarH + headH;
-      sidebar.style.top    = total + 'px';
-      sidebar.style.height = `calc(100vh - ${total}px)`;
-      document.querySelector('main').style.marginTop = '0';
-    };
-    updateSidebar();
-    window.addEventListener('resize', updateSidebar);
-  }
-
-  // Hero dot animation
-  const dots = document.querySelectorAll('.slide-dot');
-  let cur = 0;
-  if (dots.length) {
-    setInterval(() => {
-      dots[cur].style.cssText = 'width:14px;height:3px;background:rgba(255,255,255,.25);';
-      cur = (cur + 1) % dots.length;
-      dots[cur].style.cssText = 'width:32px;height:3px;background:#E86400;transition:width .4s;';
-    }, 3000);
-  }
-
-  // Simple card hover orange underline (inline override for scale)
-  document.querySelectorAll('.group').forEach(card => {
-    const line = card.querySelector('[class*="scale-x-0"]');
-    if (!line) return;
-    card.addEventListener('mouseenter', () => line.style.transform = 'scaleX(1)');
-    card.addEventListener('mouseleave', () => line.style.transform = 'scaleX(0)');
-  });
-});
-</script>
-</body>
-</html>
+            // Smooth parallax simple
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroImg = document.querySelector('.relative.min-h-\\[600px\\] img');
+                if(heroImg) {
+                    heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>
