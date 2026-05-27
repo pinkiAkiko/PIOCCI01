@@ -16,18 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (heroImg) heroImg.style.transform = 'translateY(' + window.pageYOffset * 0.4 + 'px)';
   });
 
-  /* ── Hero Carousel ── */
-  var slides = document.querySelectorAll('.carousel-slide');
-  if (slides.length > 1) {
-    var currentSlide = 0;
-    setInterval(function () {
-      slides[currentSlide].classList.remove('opacity-100');
-      slides[currentSlide].classList.add('opacity-0');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.remove('opacity-0');
-      slides[currentSlide].classList.add('opacity-100');
-    }, 4000);
-  }
+
 
 });
 
