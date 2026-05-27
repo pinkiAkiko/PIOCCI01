@@ -2,6 +2,15 @@
    PIOCCI — Custom Styles
    ═══════════════════════════════════════════ */
 
+:root {
+  --sans: "GT America", Helvetica, Arial, "Lucida Grande", sans-serif;
+  --serif: Tobias, "Times New Roman", Georgia, serif;
+}
+
+body {
+  font-feature-settings: "kern", "liga", "ss01";
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   display: inline-block;
@@ -208,9 +217,9 @@
   display: block;
   padding: 6px 0;
   color: #ffffff;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: var(--sans);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
