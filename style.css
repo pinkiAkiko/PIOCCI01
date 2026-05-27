@@ -41,17 +41,26 @@ body {
 .btn-diagonal::after {
   content: "north_east";
   font-family: 'Material Symbols Outlined';
+  font-variation-settings: 'FILL' 1, 'wght' 700;
+  font-size: 18px;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 48px;
-  background: #FF3D00;
+  background: #FF3D00 !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: white !important;
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+  transition: background 0.2s;
+}
+
+/* When button turns orange on group-hover, arrow tab flips to white */
+.group:hover .btn-diagonal::after {
+  background: #ffffff !important;
+  color: #FF3D00 !important;
 }
 
 .card-tag {
